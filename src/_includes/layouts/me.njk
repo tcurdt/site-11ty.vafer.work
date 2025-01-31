@@ -1,0 +1,32 @@
+---
+class: me
+---
+{% extends "layouts/base.njk" %}
+
+{% block meta %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Torsten Curdt",
+  "gender": "male",
+  "nationality": "Germany",
+  "image": "https://torstencurdt.com/assets/img/torstencurdt.png",
+  "email": "mailto:hi@torstencurdt.com",
+  "url": "https://torstencurdt.com",
+  "sameAs": [
+    "https://mastodon.social/@tcurdt",
+  	"https://twitter.com/tcurdt",
+  	"https://github.com/tcurdt",
+  	"https://linkedin.com/in/tcurdt",
+  	"https://instagram.com/tcurdt",
+  	"https://instagram.com/nursingthetravelbug",
+  	"https://instagram.com/yourdailygeekery"
+  ]
+}
+</script>
+{% endblock %}
+
+{% block base %}
+{{ content | safe }}
+{% endblock %}

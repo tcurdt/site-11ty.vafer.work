@@ -1,0 +1,8 @@
+<li class="margin-m-t">
+  <h3 class="title type2 serif fg-color0"><a href="{{ post.url }}" class="no-link">{{ post.data.title }}</a></h3>
+  <ol class="tags commas type-1 sans fg-color6">
+  {%- for tag in post.data.tags | sort -%}
+  <li>{{ tag }}</li>
+  {%- endfor -%}
+  </ol>
+</li>

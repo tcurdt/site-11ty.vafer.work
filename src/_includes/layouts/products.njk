@@ -1,0 +1,13 @@
+---
+class: products
+type: product
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block meta %}
+{% endblock %}
+
+{% block base %}
+{% block products %}{{ content | safe }}{% endblock %}
+{% endblock %}

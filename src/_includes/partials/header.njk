@@ -1,0 +1,35 @@
+<header class="bg-color0">
+  <nav class="layout-main sans">
+
+    <div>
+
+      <a class="margin-s-r"
+         {% if page.url == "/" %}aria-current="page"{% endif %}
+         href="/">Torsten</a>
+
+      <a class="margin-s-r"
+         {% if page.url | hasPrefix("/tech/") %}aria-current="page"{% endif %}
+         href="/tech/">Tech</a>
+
+      {% if collections.all | contains("/products/") %}
+      <a class="margin-s-r"
+         {% if page.url | hasPrefix("/products/") %}aria-current="page"{% endif %}
+         href="/products/">Products</a>
+      {% endif %}
+
+      {% if collections.all | contains("/photography/") %}
+      <a class="margin-s-r"
+         {% if page.url | hasPrefix("/photography/") %}aria-current="page"{% endif %}
+         href="/photography/">Photo</a>
+      {% endif %}
+
+      {% if collections.all | contains("/sailing/") %}
+      <a class="margin-s-r"
+         {% if page.url | hasPrefix("/sailing/") %}aria-current="page"{% endif %}
+         href="/sailing/">Sailing</a>
+      {% endif %}
+
+    </div>
+
+  </nav>
+</header>

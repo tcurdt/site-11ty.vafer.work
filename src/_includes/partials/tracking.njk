@@ -1,0 +1,41 @@
+<script defer src="https://stats.vafer.org/script.js" data-website-id="5c45d2bc-2437-4d40-ae16-290f3dcba0fa"></script>
+
+<script>
+
+/*
+
+  function scrolled() {
+    return Math.floor(
+      (document.documentElement.scrollTop + document.body.scrollTop) /
+      (document.documentElement.scrollHeight - document.documentElement.clientHeight)
+      * 100);
+  }
+
+  const interval = 1;
+  let timeOnPage = 0;
+  let maxScrolled = 0;
+  const reports = [
+    { scroll: 30 },
+  ]
+  setInterval(function() {
+    if (document.visibilityState == "visible") {
+      timeOnPage += interval;
+      maxScrolled = Math.max(maxScrolled, scrolled())
+      reports.forEach(function(report){
+        if (!report.sent && maxScrolled > report.scroll) {
+          console.log('read', report.scroll);
+
+          umami.track('read', {
+            scroll: report.scroll,
+            time: timeOnPage,
+          });
+
+          report.sent = true;
+        }
+      });
+    }
+  }, interval*1000);
+
+*/
+
+</script>

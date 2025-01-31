@@ -1,17 +1,19 @@
 const fs = require("fs");
 const htmlmin = require("html-minifier-terser");
 
-module.exports = function(eleventyConfig) {
+module.exports = function(config) {
+
+  config.addFilter("hasPrefix", (str, prefix) => {
+    return str.startsWith(prefix);
+  });
 
   if (process.env.ELEVENTY_PRODUCTION) {
-    eleventyConfig.addTransform("htmlmin", htmlminTransform);
+    config.addTransform("htmlmin", htmlminTransform);
   }
 
-  // Passthrough
-  eleventyConfig.addPassthroughCopy({ "src/static": "." });
+  config.addPassthroughCopy({ "src/static": "." });
 
-  // Watch targets
-  eleventyConfig.addWatchTarget("./src/styles/");
+  config.addWatchTarget("./src/styles/");
 
   var pathPrefix = "";
   if (process.env.GITHUB_REPOSITORY) {

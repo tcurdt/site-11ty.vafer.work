@@ -1,0 +1,51 @@
+{% macro subscribe() %}
+{% endmacro %}
+
+{% macro Xsubscribe() %}
+
+<form
+  action="https://4caixa93mg.execute-api.eu-central-1.amazonaws.com"
+  class="bg-color5 padding-l form-subscribe rounded-5 wiggle observe-form-subscribe"
+  >
+
+  <p class="margin-m-b type1 bold">
+    Join the other 1000 subscribers.
+  </p>
+
+  <p class="margin-m-t margin-l-b">
+    Get notified about new articles.<br>
+    Get priority access to the things I create.<br>
+    Be the first to hear about give aways.
+  </p>
+
+  <input type="hidden" name="p" id="p" tabindex="-1"
+    value="AXEwhtx7v/+J25NIqvPPZfkcB17bt+5QbLxgMIT4FNiN10E9GXTQ4nFCvYuXBB8loVb6PreO+9MC5uNzWWAqo2l/N33sXFt4UM1up0ZSJsD/PP7S3SMmiSEF9j1tvw4IqIUkf6Ibug9NEmZ+fgnpi/7LUnASA5ZbgEUHeTlrVsR7ByDtZd1SDhJbATOiTv670npMkFnv+asz9Y3QqmLAcuFKiwoCEuE0shUt4aoMkdlkFson7HQzbqLTwPwsc+dG9jNuEeZrGZM55jY+59ePOyiiWZigkEpJVuJ3VMitWX3R7apXZiSB8xizpHZRCgJRJhFejuZNtTVXhr5OV3/68Cif2dZSYrihWUY/6Xezeu+k">
+
+  <div class="pane-input transition-opacity transition-duration-200 active">
+
+    <div class="group | margin-s-tb">
+      <input type="email" name="email" id="email" class="email sm:w-full" aria-label="email"
+        placeholder="&nbsp;" value="" required autocomplete="email">
+      <label for="email">Email Address</label>
+    </div>
+
+    <button class="button-submit sm:w-full" aria-label="subscribe">Subscribe to Newsletter</button>
+
+    <p class="type-1 margin-s-tb">
+      No funny business. You can unsubscribe at any time.<br>
+      <a href="/privacy/" tabindex="-1">I care about your privacy.</a>
+    </p>
+  </div>
+  <div class="pane-success transition-opacity transition-duration-200">
+    <p class="type1 bold">
+      Thanks! Please check your inbox.
+    </p>
+  </div>
+  <div class="pane-error transition-opacity transition-duration-200">
+    <p class="type1 bold">
+      Sorry, but something went wrong.
+    </p>
+  </div>
+
+</form>
+{% endmacro %}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="{{ language or site.language }}">
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5" />
+<meta name="description" content="{{ description or site.description }}" />
+<meta name="keywords" content="{{ keywords or site.keywords }}" />
+<meta name="author" content="{{ site.author.name }} ({{ site.author.nick }})" />
+<meta name="copyright" content="{{ site.author.name }}">
+<meta name="language" content="{{ language or site.language }}">
+
+<meta property="twitter:url" content="{{site.url}}">
+<meta property="twitter:domain" content="{{site.domain}}">
+<meta name="twitter:site" content="@tcurdt" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ title or site.title }}" />
+<meta name="twitter:description" content="{{ description or site.description }}" />
+{% if cover %}
+<meta name="twitter:image" content="{{site.url}}{{page.url}}{{cover}}" />
+{% else %}
+<meta name="twitter:image" content="{{site.url}}/assets/img/torstencurdt-514x514.jpg" />
+{% endif %}
+
+<meta property="og:url" content="{{site.url}}{{page.url}}" />
+<meta property="og:title" content="{{ title or site.title }}" />
+<meta property="og:description" content="{{ description or site.description }}" />
+{% if cover %}
+<meta property="og:image" content="{{site.url}}{{page.url}}{{cover}}" />
+{% else %}
+<meta property="og:image" content="{{site.url}}/assets/img/torstencurdt-514x514.jpg" />
+{% endif %}
+{% if type %}
+<meta property="og:type" content="{{type}}" />
+{% else %}
+<meta property="og:type" content="website" />
+{% endif %}
+
+
+<title>{{ title or site.title }}</title>
+
+<link rel="canonical" href="{{site.url}}{{page.url}}" />
+<link rel="stylesheet" href="/assets/css/site.css" />
+<link rel="alternate" href="/tech/feed.xml" type="application/atom+xml" />
+
+<link rel="me" href="https://mastodon.social/@tcurdt" />
+
+{% block meta %}{% endblock %}
+{% block head %}{% endblock %}
+{% for path in head %}
+{% include page | relative(path) %}
+{% endfor %}
+
+{% include 'partials/tracking.njk' %}
+
+</head>
+
+<body class="{{ class }}">
+
+{% block header %}{% endblock %}
+{% for path in header %}
+{% include page | relative(path) %}
+{% endfor %}
+
+{% include 'partials/header.njk' %}
+
+{% block base %}{{ content | safe }}{% endblock %}
+
+{% include 'partials/footer.njk' %}
+
+{% for path in footer %}
+{% include page | relative(path) %}
+{% endfor %}
+{% block footer %}{% endblock %}
+
+{% set js %}
+{% include "../../_js/_kudos.js" %}
+{% include "../../_js/_scrolling.js" %}
+{% include "../../_js/_subscribe.js" %}
+{% endset %}
+
+<script>
+{{ js | jsmin | safe }}
+</script>
+
+</body>
+</html>

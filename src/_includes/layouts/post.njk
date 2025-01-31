@@ -1,0 +1,84 @@
+---
+class: tech
+type: article
+---
+{% extends "layouts/tech.njk" %}
+
+{% block meta %}
+<meta name="article:published_time" content="{{ date | techDate }}" />
+<meta name="article:modified_time" content="{{ updated or date | techDate }}" />
+{% endblock %}
+
+{% block tech %}
+<main class="bg-color0">
+
+  <article class="serif padding-xl-b">
+    <section class="layout-main relative">
+      <div class="padding-xl-t margin-m-b type-1 fg-color3">
+        <time class="sans" datetime="{{ date | techDate }}">{{ date | formatDate("LLLL yyyy") }}</time>
+        <ol class="tags commas sans">
+        {%- for tag in tags | sort -%}
+        <li>{{ tag }}</li>
+        {%- endfor -%}
+        </ol>
+      </div>
+      <h1 class="type3 sm:bold serif margin-s-b">{{ title }}</h1>
+      <p class="type1 sans margin-l-b" style="max-width:830px">{{ description }}</p>
+      <div class="feedback type-1 fixed md:invisible observe-feedback-prompt transition-opacity ease-in-out transition-duration-200 fg-color3 sans">
+        <div class="flex">
+          <div class="kudos-button zoom margin-s-r" style="width:22px">
+            {% include 'svg/feedback-clap.svg' %}
+          </div>
+          <div class="kudos">
+            {{ kudos[ site.url + page.url ] }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{ content | safe }}
+
+  </article>
+
+  <section class="padding-xl-t slanted bg-color2">
+
+    <div class="feedback-prompt | layout-text flex fg-color0">
+      <div class="zoom margin-s-r kudos-button" style="min-width:40px;width:40px">
+        {% include 'svg/feedback-clap.svg' %}
+      </div>
+      <p class="margin-m-l sans">
+        If you enjoyed reading this article please give it a <a href="{{site.url}}{{page.url}}" class="kudos-button">like</a>.
+      </p>
+    </div>
+
+  </section>
+
+  <section class="bg-color2">
+
+    <div class="layout-text padding-xl-t">
+    {% import "partials/subscribe.njk" as newsletter %}
+    {{ newsletter.subscribe() }}
+    </div>
+
+    <p class="layout-text padding-l-b">
+      <a href="/tech/feed.xml" class="type-1 sans">Or subscribe to the RSS feed</a>
+    </p>
+
+  </section>
+
+</main>
+
+{% if related %}
+<aside class="padding-xl-t padding-xl-b bg-color2">
+  <section class="layout-text">
+    <h2 class="type0 fg-color1">Related</h2>
+    <ol class="article-list no-list">
+    {% for post in collections.tech | featured(related) %}
+    {% include 'partials/list_article_tags.njk' %}
+    {% endfor %}
+    </ol>
+  </section>
+</aside>
+{% endif %}
+
+{% endblock %}

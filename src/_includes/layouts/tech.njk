@@ -1,0 +1,12 @@
+---
+class: tech
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block meta %}
+{% endblock %}
+
+{% block base %}
+{% block tech %}{{ content | safe }}{% endblock %}
+{% endblock %}
