@@ -1,18 +1,18 @@
+
+@import './fonts.css';
+
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
-
 
 /* navigation */
 
 nav > ol > li:has(> a[aria-current='page']) {
-    @apply bg-gray-900 px-4 pb-1 pt-[80px] mr-4;
+    @apply bg-my-gray px-[18px] pb-[3px] pt-[85px] mr-4;
 }
  
 nav > ol > li:not(:has(> a[aria-current='page'])) {
-    @apply pr-4 pb-1 pt-[80px];
+    @apply pr-4 pb-[3px] pt-[85px];
 }
  
 nav > ol > li > a[aria-current='page'] {
