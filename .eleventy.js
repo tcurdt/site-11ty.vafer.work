@@ -1,10 +1,16 @@
-const fs = require("fs");
-const htmlmin = require("html-minifier-terser");
+import path from "path";
+import { DateTime } from "luxon";
+import htmlmin from "html-minifier-terser";
 
-module.exports = function(config) {
+// import pluginRss from "@11ty/eleventy-plugin-rss";
+// import markdown from "markdown-it";
 
+export default function (config) {
   config.addFilter("hasPrefix", (str, prefix) => {
     return str.startsWith(prefix);
+  });
+  config.addFilter("isoDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
 
   if (process.env.ELEVENTY_PRODUCTION) {
@@ -13,27 +19,29 @@ module.exports = function(config) {
 
   config.addPassthroughCopy({ "src/static": "." });
 
+  // config.addPlugin(pluginRss);
+
   config.addWatchTarget("./src/styles/");
 
-  var pathPrefix = "";
-  if (process.env.GITHUB_REPOSITORY) {
-    pathPrefix = process.env.GITHUB_REPOSITORY.split('/')[1];
-  }
+  // support for github pages
+  const pathPrefix = process.env.GITHUB_REPOSITORY
+    ? process.env.GITHUB_REPOSITORY.split("/")[1]
+    : "";
 
   return {
     dir: {
-      input: "src"
+      input: "src",
     },
-    pathPrefix
-  }
-};
+    pathPrefix,
+  };
+}
 
 function htmlminTransform(content, outputPath) {
-  if( outputPath.endsWith(".html") ) {
+  if (outputPath.endsWith(".html")) {
     let minified = htmlmin.minify(content, {
       useShortDoctype: true,
       removeComments: true,
-      collapseWhitespace: true
+      collapseWhitespace: true,
     });
     return minified;
   }

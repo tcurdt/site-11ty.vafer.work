@@ -1,14 +1,14 @@
-module.exports = ({ env }) => ({
+export default {
   plugins: {
     "postcss-import": {},
     "tailwindcss/nesting": {},
     tailwindcss: {},
     autoprefixer: {},
     cssnano:
-      env === "production"
+      process.env.ELEVENTY_PRODUCTION === "production"
         ? {
             preset: ["default", { discardComments: { removeAll: true } }],
           }
         : false,
   },
-});
+};
