@@ -15,11 +15,13 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
     "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.6",
     "html-minifier-terser": "^7.2.0",
     "luxon": "^3.5.0",
+    "markdown-it": "^14.1.0",
     "npm-run-all2": "^7.0.0",
     "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",

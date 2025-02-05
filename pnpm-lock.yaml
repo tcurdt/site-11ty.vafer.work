@@ -11,6 +11,9 @@ importers:
       '@11ty/eleventy':
         specifier: ^3.0.0
         version: 3.0.0
+      '@11ty/eleventy-plugin-rss':
+        specifier: ^2.0.3
+        version: 2.0.3
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.5.1)
@@ -26,6 +29,9 @@ importers:
       luxon:
         specifier: ^3.5.0
         version: 3.5.0
+      markdown-it:
+        specifier: ^14.1.0
+        version: 14.1.0
       npm-run-all2:
         specifier: ^7.0.0
         version: 7.0.2
@@ -61,6 +67,9 @@ packages:
   '@11ty/eleventy-plugin-bundle@3.0.1':
     resolution: {integrity: sha512-mskptUoN7PY+rv7DCH3ZwnvMc9aFBGEHHBjmlu+WGde6ySaa43qsLqjseX6RRijDILxp3EiYQ9XnDmmsSnoqIw==}
     engines: {node: '>=18'}
+
+  '@11ty/eleventy-plugin-rss@2.0.3':
+    resolution: {integrity: sha512-ubK97uahCLpKhORLfblgxLcoaNqTcKde1cH8CeRKNTFoUuuDSEjWZtodV9fKrg+uOp5X74dO43z1/io6hhs5Bw==}
 
   '@11ty/eleventy-utils@1.0.3':
     resolution: {integrity: sha512-nULO91om7vQw4Y/UBjM8i7nJ1xl+/nyK4rImZ41lFxiY2d+XUz7ChAj1CDYFjrLZeu0utAYJTZ45LlcHTkUG4g==}
@@ -1512,6 +1521,15 @@ snapshots:
       posthtml-match-helper: 2.0.3(posthtml@0.16.6)
     transitivePeerDependencies:
       - posthtml
+      - supports-color
+
+  '@11ty/eleventy-plugin-rss@2.0.3':
+    dependencies:
+      '@11ty/eleventy-utils': 2.0.1
+      '@11ty/posthtml-urls': 1.0.1
+      debug: 4.4.0
+      posthtml: 0.16.6
+    transitivePeerDependencies:
       - supports-color
 
   '@11ty/eleventy-utils@1.0.3':
