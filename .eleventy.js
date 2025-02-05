@@ -3,6 +3,7 @@ import { DateTime } from "luxon";
 import htmlmin from "html-minifier-terser";
 import markdown from "markdown-it";
 import pluginRss from "@11ty/eleventy-plugin-rss";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default function (config) {
   // support for github pages
@@ -26,6 +27,7 @@ export default function (config) {
   // plugins
   config.addPlugin(pluginRss);
   config.addPlugin(markdown);
+  config.addPlugin(eleventyImageTransformPlugin);
 
   config.addPassthroughCopy({ "src/static": "." });
   config.addWatchTarget("./src/styles/");
