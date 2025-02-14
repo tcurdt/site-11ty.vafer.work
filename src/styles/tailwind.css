@@ -1,0 +1,34 @@
+@import "./fonts.css";
+@import "tailwindcss" source("../../src");
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+}
+
+@theme {
+  --font-sans: "Poppins";
+  --font-serif: "Merriweather";
+  --font-mono: "Source Code Pro";
+
+  --color-my-gray: #2a2a2a;
+  --color-my-orange: #f3a433;
+}
+
+/* navigation */
+
+nav > ol > li:has(> a[aria-current="page"]) {
+  @apply bg-my-gray px-[18px] pb-[3px] pt-[85px] mr-4;
+}
+
+nav > ol > li:not(:has(> a[aria-current="page"])) {
+  @apply pr-4 pb-[3px] pt-[85px];
+}
+
+nav > ol > li > a[aria-current="page"] {
+  @apply text-white hover:text-yellow-400;
+}
+
+nav > ol > li > a:not([aria-current="page"]) {
+  @apply text-black hover:text-yellow-400;
+}

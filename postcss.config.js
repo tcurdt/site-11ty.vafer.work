@@ -1,11 +1,8 @@
 export default {
   plugins: {
-    "postcss-import": {},
-    "tailwindcss/nesting": {},
-    tailwindcss: {},
-    autoprefixer: {},
+    "@tailwindcss/postcss": {},
     cssnano:
-      process.env.ELEVENTY_PRODUCTION === "production"
+      process.env.MINIMIZE === "true"
         ? {
             preset: ["default", { discardComments: { removeAll: true } }],
           }

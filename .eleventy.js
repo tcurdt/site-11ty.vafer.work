@@ -1,6 +1,6 @@
 import path from "path";
 import { DateTime } from "luxon";
-import htmlmin from "html-minifier-terser";
+// import htmlmin from "html-minifier-terser";
 import markdown from "markdown-it";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
@@ -11,10 +11,12 @@ export default function (config) {
     ? process.env.GITHUB_REPOSITORY.split("/")[1]
     : "";
 
-  // minimize for production
-  if (process.env.ELEVENTY_PRODUCTION) {
-    config.addTransform("htmlmin", htmlminTransform);
-  }
+  // // minimize for production
+  // if (process.env.MINIMIZE) {
+  //   config.addTransform("htmlmin", htmlminTransform);
+  // }
+
+  config.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   // filters
   config.addFilter("hasPrefix", (str, prefix) => {
@@ -30,7 +32,8 @@ export default function (config) {
   config.addPlugin(eleventyImageTransformPlugin);
 
   config.addPassthroughCopy({ "src/static": "." });
-  config.addWatchTarget("./src/styles/");
+  config.addPassthroughCopy({ ".site.css": "site.css" });
+  config.addWatchTarget(".site.css");
 
   return {
     dir: {
@@ -40,14 +43,14 @@ export default function (config) {
   };
 }
 
-function htmlminTransform(content, outputPath) {
-  if (outputPath.endsWith(".html")) {
-    let minified = htmlmin.minify(content, {
-      useShortDoctype: true,
-      removeComments: true,
-      collapseWhitespace: true,
-    });
-    return minified;
-  }
-  return content;
-}
+// function htmlminTransform(content, outputPath) {
+//   if (outputPath.endsWith(".html")) {
+//     let minified = htmlmin.minify(content, {
+//       useShortDoctype: true,
+//       removeComments: true,
+//       collapseWhitespace: true,
+//     });
+//     return minified;
+//   }
+//   return content;
+// }

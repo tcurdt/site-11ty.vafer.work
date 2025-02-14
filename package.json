@@ -5,29 +5,34 @@
     "node": ">=21.0.0"
   },
   "scripts": {
-    "start": "run-p start:*",
-    "start:eleventy": "eleventy --serve",
-    "start:postcss": "postcss src/styles/*.css --dir _site --watch",
-    "build": "run-s clean build:eleventy build:postcss",
-    "build:eleventy": "cross-env ELEVENTY_PRODUCTION=true eleventy",
-    "build:postcss": "cross-env NODE_ENV=production postcss src/styles/*.css --dir _site",
-    "clean": "rimraf _site"
+    "clean": "rm -rf _site src/styles/site.css",
+    "dev": "rm -rf _site src/styles/site.css && npm-run-all -p dev:*",
+    "dev:eleventy": "eleventy --serve --quiet",
+    "dev:css": "postcss src/styles/tailwind.css -o .site.css --verbose --watch",
+    "build": "run-s clean build:css build:eleventy",
+    "build:eleventy": "MINIMIZE=true eleventy",
+    "build:css": "MINIMIZE=true postcss src/styles/tailwind.css -o .site.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.1",
     "@11ty/eleventy-plugin-rss": "^2.0.3",
-    "autoprefixer": "^10.4.20",
-    "cross-env": "^7.0.3",
+    "@tailwindcss/postcss": "^4.0.6",
+    "tailwindcss": "^4.0.6",
     "cssnano": "^7.0.6",
     "html-minifier-terser": "^7.2.0",
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
     "npm-run-all2": "^7.0.0",
     "postcss": "^8.5.1",
-    "postcss-cli": "^11.0.0",
-    "postcss-import": "^16.1.0",
-    "rimraf": "^6.0.1",
-    "tailwindcss": "^3.4.17"
+    "postcss-cli": "^11.0.0"
+  },
+  "ignore": {
+    "dev": "npm-run-all -p dev:*",
+    "dev:eleventy": "eleventy --serve --quiet",
+    "dev:css": "tailwindcss -i src/styles/tailwind.css -o src/styles/site.css --postcss --watch",
+    "build": "run-s clean build:eleventy build:css",
+    "build:eleventy": "MINIMIZE=true eleventy",
+    "build:css": "tailwindcss -i src/styles/tailwind.css -o src/styles/site.css --postcss"
   }
 }
