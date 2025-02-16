@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.feed.tech.title }}</title>
   <link href="{{ site.feed.tech.url }}" rel="self"/>
-  <updated>{{ collections.tech | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{ collections.articles | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ site.feed.tech.url }}</id>
   <author>
     <name>{{ site.author.name }}</name>

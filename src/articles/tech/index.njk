@@ -1,5 +1,5 @@
 ---
-layout: layouts/default
+layout: layouts/base
 ---
 
 <main class="">
@@ -17,7 +17,11 @@ layout: layouts/default
   <section class="bg-my-gray text-white">
     <div class="container mx-auto max-w-screen-lg text-lg py-10">
 
-      <a href="duff-device">duff-device</a>
+      <ul>
+      {%- for article in collections.tech -%}
+        <li><a href="{{ article.url }}">{{ article.data.title }}</a></li>
+      {%- endfor -%}
+      </ul>
 
     </div>
   </section>

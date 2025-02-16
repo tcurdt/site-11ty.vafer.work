@@ -32,3 +32,19 @@ nav > ol > li > a[aria-current="page"] {
 nav > ol > li > a:not([aria-current="page"]) {
   @apply text-black hover:text-yellow-400;
 }
+
+article main p {
+  @apply container mx-auto max-w-screen-lg py-4 font-serif text-lg/8;
+}
+
+article h2 {
+  @apply font-sans text-lg;
+}
+
+article pre:has(code) {
+  @apply bg-gray-100;
+}
+
+article pre code {
+  @apply container mx-auto max-w-screen-lg font-mono text-base py-10 block;
+}

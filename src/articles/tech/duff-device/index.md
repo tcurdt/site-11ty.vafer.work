@@ -1,4 +1,5 @@
 ---
+layout: layouts/tech
 date: 2006-01-10
 title: The Duff Device
 description: Reducing loop overhead by abusing the C Language.
@@ -7,7 +8,6 @@ tags:
 - programming
 related:
 - modulo-of-negative-numbers
-tweet: "1354591601474097160"
 ---
 
 "[Duff's Device][1]" was discovered by Tom Duff in November 1983. It's a technique more commonly seen in assembly code. It is used to reduce the counting and comparison overhead of loops - similar to [loop unrolling][2].

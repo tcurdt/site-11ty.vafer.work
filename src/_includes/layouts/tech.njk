@@ -1,12 +1,36 @@
 ---
-class: tech
+type: tech
 ---
-
 {% extends "layouts/base.njk" %}
 
-{% block meta %}
+{% block header %}
+<meta name="article:published_time" content="{{ date }}" />
+<meta name="article:modified_time" content="{{ updated or date }}" />
 {% endblock %}
 
-{% block base %}
-{% block tech %}{{ content | safe }}{% endblock %}
+{% block content %}
+
+  <article class="bg-white text-my-gray">
+    <header class="container mx-auto max-w-screen-lg py-10">
+      <p class="text-sm text-gray-500">{{ date }}</p>
+      <p class="text-sm text-gray-500">{{ tags }}</p>
+      <h1 class="text-5xl font-serif py-5">{{ title }}</h1>
+      <p class="font-sans text-2xl">{{ description }}</p>
+    </header>
+    <main class="">
+      {{ content | safe }}
+    </main>
+  </article>
 {% endblock %}
+
+{% if related %}
+<aside class="">
+  <section class="">
+    <h2 class="">Related</h2>
+    <ol class="">
+    {% for post in collections.all | featured(related) %}
+    {% endfor %}
+    </ol>
+  </section>
+</aside>
+{% endif %}
