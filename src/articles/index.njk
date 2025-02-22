@@ -17,7 +17,16 @@ layout: layouts/base
   <section class="bg-my-gray text-white">
     <div class="container mx-auto max-w-screen-lg text-lg py-10">
 
-      <a href="duff-device">duff-device</a>
+      <ol>
+      {%- for page in collections.articles %}
+
+      <li>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+        <span>{{ page.date | isoDate }}</span>
+      </li>
+
+      {%- endfor %}
+      </ol>
 
     </div>
   </section>

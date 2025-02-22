@@ -19,6 +19,8 @@
     <title>{{ title or site.title or metadata.title }}</title>
     <link rel="stylesheet" href="{{ '/site.css' | url }}" />
 
+    <script src="/prefetch.js" defer></script>
+
     <link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
     <link rel="alternate" href="/articles/feed.xml" type="application/atom+xml" />
@@ -38,17 +40,24 @@
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/articles/tech/") %}aria-current="page"{% endif %}
-            href="/articles/tech">Tech</a>
+            href="/articles/tech/">Tech</a>
         </li>
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/articles/rants/") %}aria-current="page"{% endif %}
-            href="/articles/rants">Rants</a>
+            href="/articles/rants/">Rants</a>
         </li>
+        <!--
+        <li class="">
+          <a class=""
+            {% if page.url | hasPrefix("/videos/") %}aria-current="page"{% endif %}
+            href="/videos/">Videos</a>
+        </li>
+        -->
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/products/") %}aria-current="page"{% endif %}
-            href="/products" >Products</a>
+            href="/products/" >Products</a>
         </li>
       </ol>
     </nav>

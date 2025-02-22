@@ -17,11 +17,17 @@ layout: layouts/base
   <section class="bg-my-gray text-white">
     <div class="container mx-auto max-w-screen-lg text-lg py-10">
 
-      <ul>
+      <ol>
       {%- for article in collections.tech -%}
-        <li><a href="{{ article.url }}">{{ article.data.title }}</a></li>
+
+      <li>
+        <a href="{{ article.url }}">{{ article.data.title }}</a>
+        <div>{{ article.data.date | humanDate }}</div>
+        <div>{{ article.data.tags | join(',') }}</div>
+      </li>
+
       {%- endfor -%}
-      </ul>
+      </ol>
 
     </div>
   </section>

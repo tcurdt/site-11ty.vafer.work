@@ -7,11 +7,16 @@ layout: layouts/base
   <section id="hero" class="bg-white px-2">
     <div class="container mx-auto max-w-screen-lg text-lg py-10">
 
-      <ul>
+      <ol>
       {%- for article in collections.rants -%}
-        <li><a href="{{ article.url }}">{{ article.data.title }}</a></li>
+
+      <li>
+        <a href="{{ article.url }}">{{ article.data.title }}</a>
+        <span>{{ article.data.date | isoDate }}</span>
+      </li>
+
       {%- endfor -%}
-      </ul>
+      </ol>
 
     </div>
     </div>

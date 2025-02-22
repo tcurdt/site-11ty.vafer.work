@@ -1,0 +1,25 @@
+---
+layout: layouts/base
+videos:
+  - name: "Video 1"
+    id: qWZsFk0Kvhw
+---
+
+<main class="">
+
+  <section id="hero" class="bg-white px-2">
+    <div class="container mx-auto max-w-screen-lg text-lg py-10">
+
+    <ul>
+      {% for video in videos %}
+      <li class="bg-sky-500">
+        <img eleventy:widths="200" src="https://img.youtube.com/vi/{{ video.id }}/hqdefault.jpg" alt="{{ video.name }}">
+        <a href="https://www.youtube.com/watch?v={{ video.id }}">{{ video.name}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    </div>
+  </section>
+
+</main>

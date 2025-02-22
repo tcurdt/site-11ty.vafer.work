@@ -3,23 +3,30 @@ layout: layouts/base
 ---
 <main class="text-lg bg-white">
 
-  <h1 class="my-10 mx-auto max-w-screen-lg">
+  <h1 class="mx-auto max-w-screen-lg py-10">
     <span class="">Resources and People</span><br>
     <span>I think are worth knowing.</span>
   </h1>
 
   <div class="bg-my-gray text-white py-10">
-  <section id="sailing" class="mx-auto max-w-screen-lg">
-    <ul class="">
-      <li>like1</li>
-      <li>like2</li>
-    </ul>
-  </section>
+
+    {% for section in links %}
+    <section class="mx-auto max-w-screen-lg">
+      <h2 class="text-my-orange py-5">{{ section.section }}</h2>
+      <ol>
+      {% for link in section.links | sort(attribute="title") %}
+      <li class=""><a href="{{ link.url }}" rel="nofollow">{{ link.title }}</a></li>
+      {% endfor %}
+      </ol>
+    </section>
+    {% endfor %}
+
   </div>
 
   <div class="bg-my-gray text-white py-10">
   <section id="add" class="mx-auto max-w-screen-lg">
-    What am I missing? <a href="/contact" class="underline">Let me know</a>.
+    What am I missing?
+    <a href="mailto:{{ site.author.email }}" class="underline">Let me know</a>
   </section>
   </div>
 

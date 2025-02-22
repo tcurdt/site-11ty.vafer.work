@@ -1,6 +1,6 @@
 import path from "path";
 import { DateTime } from "luxon";
-
+import yaml from "js-yaml";
 import markdown from "markdown-it";
 import markdownAttrs from "markdown-it-attrs";
 import markdownImplicitFigures from "markdown-it-implicit-figures";
@@ -29,6 +29,8 @@ export default function (config) {
   config.setLibrary("md", md);
   config.amendLibrary("md", (mdLib) => mdLib.enable("code"));
 
+  config.addDataExtension("yml", (contents) => yaml.load(contents));
+
   // collections
 
   config.addCollection("tech", function (collection) {
@@ -55,6 +57,14 @@ export default function (config) {
       });
   });
 
+  config.addCollection("products", function (collection) {
+    return collection
+      .getFilteredByGlob("src/products/*/index.njk")
+      .sort(function (a, b) {
+        return b.date - a.date;
+      });
+  });
+
   // // minimize for production
   // if (process.env.MINIMIZE) {
   //   config.addTransform("htmlmin", htmlminTransform);
@@ -64,12 +74,37 @@ export default function (config) {
 
   // filters
 
+  config.addFilter("stringify", (obj) => {
+    const o = {
+      url: obj.url,
+      fileSlug: obj.fileSlug,
+
+      class: obj.data.class,
+      type: obj.data.type,
+      layout: obj.data.layout,
+      tags: obj.data.tags,
+      date: obj.data.date,
+      title: obj.data.title,
+      description: obj.data.description,
+    };
+    console.log(obj);
+    return JSON.stringify(o, null, 2);
+  });
+
   config.addFilter("hasPrefix", (str, prefix) => {
     return str.startsWith(prefix);
   });
+
   config.addFilter("isoDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
+  config.addFilter("humanDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("MMMM yyyy");
+  });
+  config.addFilter("formatDate", (dateObj, format) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(format);
+  });
+
   config.addFilter("featured", (collection = [], related = []) => {
     const pages = collection.filter((page) => related.includes(page.fileSlug));
     const index = {};
@@ -82,7 +117,23 @@ export default function (config) {
   // plugins
 
   config.addPlugin(pluginRss);
-  config.addPlugin(eleventyImageTransformPlugin);
+  config.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["webp", "jpeg"],
+    svgShortCircuit: true,
+    // cacheOptions: {
+    //   duration: "1w",
+    // },
+    // sharpJpegOptions: {
+    //   quality: 85,
+    // },
+    htmlOptions: {
+      imgAttributes: {
+        loading: "lazy",
+        decoding: "async",
+      },
+      pictureAttributes: {},
+    },
+  });
 
   config.addPassthroughCopy({ "src/static": "." });
   config.addPassthroughCopy({ ".site.css": "site.css" });

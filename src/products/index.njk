@@ -7,9 +7,19 @@ layout: layouts/base
   <section id="hero" class="bg-white px-2">
     <div class="container mx-auto max-w-screen-lg text-lg py-10">
 
-      <a href="flip-flop-fix">flip flop fix</a>
+    <ul>
+    {%- for product in collections.products -%}
 
-    </div>
+    <li class="bg-sky-500">
+
+      <img eleventy:widths="200" src="{{ product.url }}/overview.jpg" alt="{{ product.data.title }}" />
+      <a href="{{ product.url }}">{{ product.data.title }}</a>
+
+    </li>
+
+    {%- endfor -%}
+    </ul>
+
     </div>
   </section>
 
