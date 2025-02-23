@@ -33,6 +33,21 @@ nav > ol > li > a:not([aria-current="page"]) {
   @apply text-black hover:text-yellow-400;
 }
 
+/* interactive */
+
+button,
+.button {
+  @apply text-lg font-sans bg-blue-500 text-white px-4 py-2 rounded-lg;
+}
+
+.alternating {
+  span:nth-child(even) {
+    @apply text-gray-500;
+  }
+}
+
+/* article */
+
 article main p {
   @apply container mx-auto max-w-screen-lg py-4 font-serif text-lg/8;
 }

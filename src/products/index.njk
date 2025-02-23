@@ -13,7 +13,10 @@ layout: layouts/base
     <li class="bg-sky-500">
 
       <img eleventy:widths="200" src="{{ product.url }}/overview.jpg" alt="{{ product.data.title }}" />
-      <a href="{{ product.url }}">{{ product.data.title }}</a>
+
+      <div class="py-5">
+      <a href="{{ product.url }}" class="button">Learn More</a>
+      </div>
 
     </li>
 

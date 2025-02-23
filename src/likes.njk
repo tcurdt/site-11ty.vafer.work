@@ -3,9 +3,9 @@ layout: layouts/base
 ---
 <main class="text-lg bg-white">
 
-  <h1 class="mx-auto max-w-screen-lg py-10">
-    <span class="">Resources and People</span><br>
-    <span>I think are worth knowing.</span>
+  <h1 class="mx-auto max-w-screen-lg pt-20 pb-10">
+    <span class="text-5xl/9 font-serif">Websites I like</span><br>
+    <span>And you might, too.</span>
   </h1>
 
   <div class="bg-my-gray text-white py-10">
@@ -15,7 +15,10 @@ layout: layouts/base
       <h2 class="text-my-orange py-5">{{ section.section }}</h2>
       <ol>
       {% for link in section.links | sort(attribute="title") %}
-      <li class=""><a href="{{ link.url }}" rel="nofollow">{{ link.title }}</a></li>
+      <li class="font-serif">
+        <a href="{{ link.url }}" rel="nofollow">{{ link.title }}</a>
+        <i class="fa fa-external-link" aria-hidden="true"></i>
+      </li>
       {% endfor %}
       </ol>
     </section>
