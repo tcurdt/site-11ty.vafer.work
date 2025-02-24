@@ -33,25 +33,9 @@ export default function (config) {
 
   // collections
 
-  config.addCollection("tech", function (collection) {
-    return collection
-      .getFilteredByGlob("src/articles/tech/**/*.md")
-      .sort(function (a, b) {
-        return b.date - a.date;
-      });
-  });
-
-  config.addCollection("rants", function (collection) {
-    return collection
-      .getFilteredByGlob("src/articles/rants/**/*.md")
-      .sort(function (a, b) {
-        return b.date - a.date;
-      });
-  });
-
   config.addCollection("articles", function (collection) {
     return collection
-      .getFilteredByGlob("src/articles/**/*.md")
+      .getFilteredByGlob("src/articles/*/*.md")
       .sort(function (a, b) {
         return b.date - a.date;
       });

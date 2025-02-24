@@ -7,10 +7,10 @@ class: cv
 sitemap: false
 ---
 
-<main class="">
+<main class="bg-white text-my-gray">
 
-  <section class="bg-white text-my-gray font-serif">
-    <div class="container mx-auto max-w-screen-lg text-lg py-10">
+  <section class="font-serif">
+    <div class="container mx-auto max-w-screen-lg text-lg pt-20 pb-20">
       <h1 class="sr-only">The CV of Torsten Curdt</h1>
       <p class="text-2xl/9">
         <span class="text-my-gray">I got my first computer at age 12.<br></span>
@@ -21,129 +21,130 @@ sitemap: false
     </div>
   </section>
 
-  <section class="bg-my-gray text-white">
+  <section class="w-full">
     <h2 class="sr-only">I've contributed to</h2>
-    <hr/>
-    <ul class="">
-      <li class="job_apache">
+    <hr class=""/>
+    <div class="overflow-x-auto">
+    <ul class="flex justify-center items-center space-x-20 px-4 py-10 min-w-max">
+      <li class="flex items-center">
         <a href="https://apache.org/">
           <p class="hidden">apache</p>
-          <img style="height:45px" src="/static/images/logo-apache.svg" alt="apache"/>
+          <img class="h-12 w-auto object-contain" src="/static/images/logo-apache.svg" alt="apache"/>
           <p class="hidden">
           Long time open source contributor and member of the Apache Software Foundation.
           </p>
         </a>
       </li><!--
-      --><li class="job_honeypot">
+      --><li class="flex items-center">
         <a href="https://www.honeypot.io/">
           <p class="hidden">honeypot</p>
-          <img style="height:35px" src="/static/images/logo-honeypot.svg" alt="honeypot"/>
+          <img class="h-9 w-auto object-contain"  src="/static/images/logo-honeypot.svg" alt="honeypot"/>
           <p class="hidden">
           As technical advisor helped hiring the initial technical team, advised on the technology stack and provided guidance in technical decisions.
           </p>
         </a>
       </li><!--
-      --><li class="job_soundcloud">
+      --><li class="flex items-center">
         <a href="https://soundcloud.com/">
           <p class="hidden">soundcloud</p>
-          <img style="height:50px" src="/static/images/logo-soundcloud.svg" alt="soundcloud"/>
+          <img class="h-12 w-auto object-contain" src="/static/images/logo-soundcloud.svg" alt="soundcloud"/>
           <p class="hidden">
           As part of the data team helped to build the data warehouse, improve scalability and push the architecture beyond 16Mio users.
           </p>
         </a>
       </li><!--
-      --><li class="job_gilt">
+      --><li class="flex items-center">
         <a href="https://www.gilt.jp">
           <p class="hidden">gilt</p>
-          <img style="height:25px" src="/static/images/logo-gilt.svg" alt="gilt"/>
+          <img class="h-6 w-auto object-contain" src="/static/images/logo-gilt.svg" alt="gilt"/>
           <p class="hidden">
           Helped to the create the concept and implement the Gilt Japan iOS App. Was featured by Apple for more than 4 weeks.
           </p>
         </a>
       </li><!--
-      --><li class="job_joost">
+      --><li class="flex items-center">
         <a href="https://en.wikipedia.org/wiki/Joost">
           <p class="hidden">joost</p>
-          <img style="height:30px" src="/static/images/logo-joost.svg" alt="joost"/>
+          <img class="h-8 w-auto object-contain" src="/static/images/logo-joost.svg" alt="joost"/>
           <p class="hidden">
           Helped to build and maintain a scalable web and data infrastructure. Led the distributed data team responsible for user tracking and reporting.
           </p>
         </a>
       </li>
     </ul>
+    </div>
     <hr/>
   </section>
 
-  <section class="bg-white text-my-gray">
-    <div class="container mx-auto max-w-screen-lg text-lg py-10">
-      <h2 class="">Open Source</h2>
+  <section class="text-lg pt-20">
+    <div class="container mx-auto max-w-screen-lg">
+      <h2 class="pb-5">Open Source</h2>
       <ol class="">
-        <li>
-          <div class="">Jun 2005 - now</div>
-          <p>Member of the ASF</p>
+        <li class="pb-5">
+          <div class="text-gray-500 text-sm">Jun 2005 - now</div>
+          <p class="font-serif">Member of the ASF</p>
         </li>
         <li class="">
-          <div class="">Jun 2007 - Aug 2009</div>
-          <p>VP Apache Commons</p>
+          <div class="text-gray-500 text-sm">Jun 2007 - Aug 2009</div>
+          <p class="font-serif">VP Apache Commons</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <section class="bg-white text-my-gray">
-    <div class="container mx-auto max-w-screen-lg text-lg py-10">
+  <section class="text-lg pt-15">
+    <div class="container mx-auto max-w-screen-lg text-lg">
       <h2 class="">Companies I have worked with</h2>
       <ol class="">
-        <li>
-          <div class="">Oct 2021 - now, remote</div>
-          <h3 class="">Technical Project Manager at <a href="https://www.bbaw.de/">Berlin-Brandenburgischen Akademie der Wissenschaften</a></h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Oct 2021 - now, remote</div>
+          <h3 class="font-bold">Technical Project Manager at <a href="https://www.bbaw.de/">Berlin-Brandenburgischen Akademie der Wissenschaften</a></h3>
           <p>
             Guided an operational system migration to an external server with hands on support. Technical contact and project management to reduce technical debt and lifted an old Laravel code base to the current version. Hiring of outsourced engineering and support of the local team.
           </p>
         </li>
-        <li class="">
-          <div class="">Sep 2020 - now, Berlin and remote</div>
-          <h3 class="">Technical Advisor at <a href="https://edkimo.com/">Edkimo</a></h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Sep 2020 - now, Berlin and remote</div>
+          <h3 class="font-bold">Technical Advisor at <a href="https://edkimo.com/">Edkimo</a></h3>
           <p>
             Technical advice on the MVP. Now helping to improve the 3rd product iteration by giving senior advise on topics like data modeling, operations, scalability, or just good software engineering. Helping to hire and grow the team. Now also one of the Angel investors.
           </p>
         </li>
-        <li class="">
-          <div class="">Apr 2015 - Dec 2020, Berlin and remote</div>
-          <h3 class="">Technical Advisor at <a href="https://www.honeypot.io/">Honeypot</a></h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Apr 2015 - Dec 2020, Berlin and remote</div>
+          <h3 class="font-bold">Technical Advisor at <a href="https://www.honeypot.io/">Honeypot</a></h3>
           <p>
             The first technical person at Honeypot. Helped with interviewing and hiring the developers for the MVP, advised on the technology stack and technical decisions.
             Honeypot got acquired by Xing in 2019.
           </p>
         </li>
-        <li class="">
-          <div class="">Aug 2017 - Jun 2018, remote</div>
-          <h3 class="">iOS and Embedded Development at <a href="https://calliope.cc/">Calliope</a></h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Aug 2017 - Jun 2018, remote</div>
+          <h3 class="font-bold">iOS and Embedded Development at <a href="https://calliope.cc/">Calliope</a></h3>
           <p>
             Worked on the Calliope mini iOS app to transfer firmware to the device via Bluetooth. Also implemented a tiny VM for the firmware of the iOS playbook. Mostly Swift and C/C++.
           </p>
         </li>
-        <li class="">
-          <div class="">Apr 2016 - Aug 2017, remote</div>
-          <h3 class="">iOS Development at <a href="https://www.galeria.de/">Galeria Kaufhof</a></h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Apr 2016 - Aug 2017, remote</div>
+          <h3 class="font-bold">iOS Development at <a href="https://www.galeria.de/">Galeria Kaufhof</a></h3>
           <p>
             UX consulting, temporary product owner and manager. Worked with the different departments to build the concept for the MVP and then implemented it with the latest technologies. (Swift, Reactive)
           </p>
         </li>
-        <li class="">
-          <div class="">Feb 2016 - Jul 2016, Berlin</div>
-          <h3 class="">Backend Development at Viorama</h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Feb 2016 - Jul 2016, Berlin</div>
+          <h3 class="font-bold">Backend Development at Viorama</h3>
           <p>
             Helped to finish up the the REST backend written in Go and implemented iOS push notifications for their launch at SXSW. DevOps babysitting of the kubernetes cluster in the Google Cloud. Won the SXSW Accelerator award.
           </p>
         </li>
-        <li class="">
-          <div class="">Feb 2013 - Jul 2014, remote</div>
-          <h3 class="">iOS Development at <a href="https://www.gilt.jp/">Gilt Japan</a></h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Feb 2013 - Jul 2014, remote</div>
+          <h3 class="font-bold">iOS Development at <a href="https://www.gilt.jp/">Gilt Japan</a></h3>
           <p>
             Built the new Gilt Japan iOS application and helped with the underlying backend API. Featured by Apple. (Objective-C, Reactive, MVVM, NodeJS)
           </p>
-          <!--
           <details>
             <summary>Recommendations</summary>
             <ul>
@@ -154,23 +155,21 @@ sitemap: false
               </li>
             </ul>
           </details>
-          -->
         </li>
-        <li class="">
-          <div class="">Mar 2010 - Aug 2012, Berlin and remote</div>
-          <h3 class="">Data Team at <a href="https://soundcloud.com">SoundCloud</a></h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Mar 2010 - Aug 2012, Berlin and remote</div>
+          <h3 class="font-bold">Data Team at <a href="https://soundcloud.com">SoundCloud</a></h3>
           <p>
             Worked on multiple projects to improve scalability and pushing the architecture beyond 16 Mio users. This covered data and ops engineering as well as backend architecture.<br>
             Built prototypes to replace the old stats system based on MongoDB and Cassandra (but built the final version with Mysql). Improved the jmx monitoring integration of java components. Worked on a better master-slave adapter for Rails to better utilize the slave databases. Helped getting the Hadoop cluster and the whole data pipeline setup and integrated. Worked on MapReduce jobs for analytics.
           </p>
         </li>
-        <li class="">
-          <div class="">Dec 2008 - Jun 2009, remote</div>
-          <h3 class="">iOS Development and Backend Architecture at <a href="http://agilepartners.com/">Agile Partners</a></h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Dec 2008 - Jun 2009, remote</div>
+          <h3 class="font-bold">iOS Development and Backend Architecture at <a href="http://agilepartners.com/">Agile Partners</a></h3>
           <p>
             Helped to design the architecture and create a custom CMS for ieee.org. Worked on Star6 and the Merck Manuals iOS apps.
           </p>
-          <!--
           <details>
             <summary>Recommendations</summary>
             <ul>
@@ -180,15 +179,13 @@ sitemap: false
               </li>
             </ul>
           </details>
-          -->
         </li>
-        <li class="">
-          <div class="">Sep 2006 - Nov 2008, remote</div>
-          <h3 class="">Data Team Lead at <a href="https://en.wikipedia.org/wiki/Joost">Joost</a></h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Sep 2006 - Nov 2008, remote</div>
+          <h3 class="font-bold">Data Team Lead at <a href="https://en.wikipedia.org/wiki/Joost">Joost</a></h3>
           <p>
             First helped to build and maintain a scalable web infrastructure and deployment procedures. Then responsible for the area of user tracking and reporting. Led the team to improve the hadoop based storage and reporting system. Also maintained and improved the low level tracking components.
           </p>
-          <!--
           <details>
             <summary>Recommendations</summary>
             <ul>
@@ -223,15 +220,13 @@ sitemap: false
               </li>
             </ul>
           </details>
-          -->
         </li>
-        <li class="">
-          <div class="">Apr 2004 - Aug 2006, Frankfurt and Melbourne</div>
-          <h3 class="">Senior Software Engineer at <a href="https://www.flexera.com/">ManageSoft</a></h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Apr 2004 - Aug 2006, Frankfurt and Melbourne</div>
+          <h3 class="font-bold">Senior Software Engineer at <a href="https://www.flexera.com/">ManageSoft</a></h3>
           <p>
             Key role in design and implementation of several Mac/Unix and Windows products. Internal and external trainings and presentations. Improvements to build, test and continuous integration infrastructure.
           </p>
-          <!--
           <details>
             <summary>Recommendations</summary>
             <ul>
@@ -241,18 +236,17 @@ sitemap: false
               </li>
             </ul>
           </details>
-          -->
         </li>
-        <li class="">
-          <div class="sans type-1 fg-color3">Apr 1999 - Sep 2003, Göttingen</div>
-          <h3 class="bold">Founder and CTO at dff internet &amp; medien</h3>
+        <li class="pt-5">
+          <div class="text-gray-500 text-sm">Apr 1999 - Sep 2003, Göttingen</div>
+          <h3 class="font-bold">Founder and CTO at dff internet &amp; medien</h3>
           <p>
             Architect of a PHP and a Cocoon based web application platform. Technical lead for several B2B and B2C web solutions. Architect of a mobile tracking solution focused on innovative usability. Contributor to the Apache Cocoon project.
           </p>
         </li>
-        <li class="">
-          <div class="">1992 - 1999, Göttingen</div>
-          <h3 class="">Freelancer</h3>
+        <li class="pt-5 pb-10">
+          <div class="text-gray-500 text-sm">1992 - 1999, Göttingen</div>
+          <h3 class="font-bold">Freelancer</h3>
           <p>
             Linux based modem alarming system written in C with custom hardware, TA for C++ at University, and many more small jobs.
           </p>

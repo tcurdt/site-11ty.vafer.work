@@ -1,5 +1,5 @@
 ---
-type: tech
+type: article
 ---
 {% extends "layouts/base.njk" %}
 
@@ -11,9 +11,9 @@ type: tech
 {% block content %}
 
   <article class="bg-white text-my-gray">
-    <header class="container mx-auto max-w-screen-lg py-10">
+    <header class="container mx-auto max-w-screen-lg pt-20 pb-10">
       <p class="text-sm text-gray-500">{{ tags | join(',') }}</p>
-      <h1 class="text-5xl font-serif py-5">{{ title }}</h1>
+      <h1 class="text-5xl font-serif py-2">{{ title }}</h1>
       <p class="font-sans text-2xl">{{ description }}</p>
       <p class="text-sm text-gray-500 py-2">{{ date | humanDate }}</p>
     </header>

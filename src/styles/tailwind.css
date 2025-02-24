@@ -46,6 +46,18 @@ button,
   }
 }
 
+details {
+  @apply cursor-pointer;
+}
+
+summary {
+  @apply text-gray-500 hover:text-gray-900 text-sm py-2;
+}
+
+details li {
+  @apply py-2;
+}
+
 /* article */
 
 article main p {

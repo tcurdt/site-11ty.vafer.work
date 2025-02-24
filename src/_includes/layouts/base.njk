@@ -34,18 +34,13 @@
       <ol class="flex container mx-auto max-w-screen-lg">
         <li class="">
           <a class=""
-            {% if page.url == "/" %}aria-current="page"{% endif %}
+            {% if page.url == "/" or page.url | hasPrefix("/cv/") %}aria-current="page"{% endif %}
             href="/" >Torsten</a>
         </li>
         <li class="">
           <a class=""
-            {% if page.url | hasPrefix("/articles/tech/") %}aria-current="page"{% endif %}
-            href="/articles/tech/">Tech</a>
-        </li>
-        <li class="">
-          <a class=""
-            {% if page.url | hasPrefix("/articles/rants/") %}aria-current="page"{% endif %}
-            href="/articles/rants/">Rants</a>
+            {% if page.url | hasPrefix("/articles/") %}aria-current="page"{% endif %}
+            href="/articles/">Articles</a>
         </li>
         <!--
         <li class="">

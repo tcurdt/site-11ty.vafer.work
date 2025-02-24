@@ -1,5 +1,5 @@
 ---
-layout: layouts/tech
+layout: layouts/article
 date: 2006-01-10
 title: The Duff Device
 description: Reducing loop overhead by abusing the C Language.
