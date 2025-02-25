@@ -60,6 +60,10 @@ details li {
 
 /* article */
 
+.social {
+  @apply duration-200 hover:scale-110 py-10;
+}
+
 article main p {
   @apply container mx-auto max-w-screen-lg py-4 font-serif text-lg/8;
 }
