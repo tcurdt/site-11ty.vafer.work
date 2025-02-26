@@ -2,3 +2,4 @@ node_modules/
 _site/
 .site.css
 .cache
+_drafts
