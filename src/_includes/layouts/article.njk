@@ -12,9 +12,9 @@ type: article
 
   <article class="bg-white text-my-gray">
     <header class="container mx-auto max-w-screen-lg pt-20 pb-10">
-      <p class="text-sm text-gray-500">{{ tags | join(',') }}</p>
+      <p class="text-sm text-gray-500">{{ tags | join(', ') }}</p>
       <h1 class="text-5xl font-serif py-2">{{ title }}</h1>
-      <p class="font-sans text-2xl">{{ description }}</p>
+      <p class="font-sans text-2xl/9">{{ description }}</p>
       <p class="text-sm text-gray-500 py-2">{{ date | humanDate }}</p>
     </header>
     <main class="pb-5">

@@ -26,37 +26,7 @@ title: Articles by Torsten Curdt
     </div>
   </section>
 
-  <section class="w-full bg-white">
-    <div class="overflow-x-auto">
-    <ul class="flex justify-center items-center space-x-20 px-4 min-w-max">
-      <li class="social">
-        <a href="mailto:{{ site.author.email }}" aria-label="email"
-            class="no-link" rel="me">
-        <span class="hidden">email</span>
-        {% include 'svg/social-email.svg' %}</a></li><!--
-      --><li class="social">
-        <a href="https://mastodon.social/@tcurdt" aria-label="mastodon"
-            class="no-link" rel="me">
-        <span class="hidden">mastodon</span>
-        {% include 'svg/social-mastodon.svg' %}</a></li><!--
-      --><li class="social">
-        <a href="https://www.linkedin.com/in/tcurdt/" aria-label="linkedin"
-            class="no-link" rel="me">
-        <span class="hidden">linkedin</span>
-        {% include 'svg/social-linkedin.svg' %}</a></li><!--
-      --><li class="social">
-        <a href="https://github.com/tcurdt" aria-label="github"
-            class="no-link" rel="me">
-        <span class="hidden">github</span>
-        {% include 'svg/social-github.svg' %}</a></li><!--
-      --><li class="social">
-        <a href="https://instagram.com/tcurdt" aria-label="instagram"
-            class="no-link" rel="me">
-        <span class="hidden">instagram</span>
-        {% include 'svg/social-instagram.svg' %}</a></li>
-    </ul>
-    </div>
-  </section>
+  {% include 'partials/socials.njk' %}
 
   <section class="bg-my-gray text-white">
     <div class="container mx-auto max-w-screen-lg text-lg py-10">
@@ -64,9 +34,9 @@ title: Articles by Torsten Curdt
       <ol>
       {%- for article in collections.articles -%}
 
-      <li>
-        <a class="text-4xl font-serif" href="{{ article.url }}">{{ article.data.title }}</a>
-        <div class="text-sm text-gray-500">{{ article.data.tags | join(',') }}</div>
+      <li class="pb-5">
+        <a class="text-3xl font-serif" href="{{ article.url }}">{{ article.data.title }}</a>
+        <div class="text-sm text-gray-500">{{ article.data.tags | join(', ') }}</div>
       </li>
 
       {%- endfor -%}

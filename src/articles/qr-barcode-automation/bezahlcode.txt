@@ -1,0 +1,1 @@
+bank://singlepaymentsepa?name=JOHN%20RECEIVER&reason=Thanks%20for%20all%20the%20fish&iban=GB33BUKB20201555555555&bic=&amount=1500%2C99

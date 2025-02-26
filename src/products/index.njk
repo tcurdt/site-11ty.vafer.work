@@ -11,12 +11,14 @@ title: Products by Torsten Curdt
     <ul>
     {%- for product in collections.products -%}
 
-    <li class="bg-sky-500">
+    <li class="">
 
-      <img eleventy:widths="200" src="{{ product.url }}/overview.jpg" alt="{{ product.data.title }}" />
+      <a href="{{ product.url }}" class="">
+        <img eleventy:widths="200" src="{{ product.url }}/overview.jpg" alt="{{ product.data.title }}" class="drop-shadow" />
+      </a>
 
       <div class="py-5">
-      <a href="{{ product.url }}" class="button">Learn More</a>
+        <a href="{{ product.url }}" class="button">Learn More</a>
       </div>
 
     </li>

@@ -69,7 +69,24 @@ article main p {
 }
 
 article h2 {
-  @apply font-sans text-lg;
+  @apply container mx-auto max-w-screen-lg font-sans text-2xl pt-10;
+}
+
+article table {
+  @apply container mx-auto max-w-screen-lg font-sans my-10;
+}
+
+article thead {
+  @apply bg-gray-300 pt-10;
+}
+
+article tbody {
+  @apply bg-gray-200 pb-10;
+}
+
+article td,
+th {
+  @apply px-4;
 }
 
 article pre:has(code) {
@@ -78,4 +95,16 @@ article pre:has(code) {
 
 article pre code {
   @apply container mx-auto max-w-screen-lg font-mono text-base py-10 block;
+}
+
+article figure {
+  @apply container mx-auto max-w-screen-lg py-10;
+}
+
+article picture {
+  @apply py-10;
+}
+
+article figcaption {
+  @apply text-gray-500 text-sm pt-5;
 }
