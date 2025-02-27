@@ -68,8 +68,17 @@ article main p {
   @apply container mx-auto max-w-screen-lg py-4 font-serif text-lg/8;
 }
 
+article h2,
+article h3 {
+  @apply container mx-auto max-w-screen-lg font-sans;
+}
+
 article h2 {
-  @apply container mx-auto max-w-screen-lg font-sans text-2xl pt-10;
+  @apply text-2xl font-bold pt-10;
+}
+
+article h3 {
+  @apply text-lg font-bold pt-10;
 }
 
 article table {
@@ -85,12 +94,20 @@ article tbody {
 }
 
 article td,
-th {
+article th {
   @apply px-4;
 }
 
 article pre:has(code) {
-  @apply bg-gray-100;
+  @apply bg-gray-100 overflow-x-auto;
+}
+
+article blockquote {
+  @apply container mx-auto max-w-screen-lg;
+}
+
+article blockquote p {
+  @apply italic px-15 py-10 text-xl/9 text-gray-700;
 }
 
 article pre code {
