@@ -4,7 +4,6 @@ date: 2006-10-10
 title: SSL Client Cert Authentication with Java
 description: Using a PKCS12 certificate for authentication requires a bit more work.
 keywords: java, client certificate, cert, ssl, tls, pkcs12, x509
-series: featured
 tags:
 - java
 - ssl

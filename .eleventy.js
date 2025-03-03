@@ -71,7 +71,6 @@ export default function (config) {
       title: obj.data.title,
       description: obj.data.description,
     };
-    console.log(obj);
     return JSON.stringify(o, null, 2);
   });
 
@@ -102,7 +101,7 @@ export default function (config) {
 
   config.addPlugin(pluginRss);
   config.addPlugin(eleventyImageTransformPlugin, {
-    formats: ["webp", "jpeg"],
+    formats: ["webp", "jpeg", "svg"],
     svgShortCircuit: true,
     // cacheOptions: {
     //   duration: "1w",
@@ -122,7 +121,6 @@ export default function (config) {
   config.addPassthroughCopy({ "src/static": "." });
   config.addPassthroughCopy({ ".site.css": "site.css" });
   config.setUseGitIgnore(false);
-  // config.watchIgnores.delete(".site.css");
   config.addWatchTarget(".site.css");
 
   return {

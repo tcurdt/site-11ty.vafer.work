@@ -102,6 +102,10 @@ article pre:has(code) {
   @apply bg-gray-100 overflow-x-auto;
 }
 
+article a {
+  @apply underline underline-offset-2 decoration-blue-200;
+}
+
 article blockquote {
   @apply container mx-auto max-w-screen-lg;
 }
@@ -110,12 +114,23 @@ article blockquote p {
   @apply italic px-15 py-10 text-xl/9 text-gray-700;
 }
 
+article pre {
+  @apply my-5;
+}
 article pre code {
   @apply container mx-auto max-w-screen-lg font-mono text-base py-10 block;
 }
 
 article figure {
   @apply container mx-auto max-w-screen-lg py-10;
+}
+
+article figure img {
+  @apply w-full p-5 border border-gray-200; /* shadow-lg; */
+}
+
+article figure figcaption {
+  @apply text-center;
 }
 
 article picture {

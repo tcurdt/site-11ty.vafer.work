@@ -9,28 +9,31 @@ type: article
 {% endblock %}
 
 {% block content %}
-
-  <article class="bg-white text-my-gray">
-    <header class="container mx-auto max-w-screen-lg pt-20 pb-10">
-      <p class="text-sm text-gray-500">{{ tags | join(', ') }}</p>
-      <h1 class="text-5xl font-serif py-2">{{ title }}</h1>
-      <p class="font-sans text-2xl/9">{{ description }}</p>
-      <p class="text-sm text-gray-500 py-2">{{ date | humanDate }}</p>
-    </header>
-    <main class="pb-5">
-      {{ content | safe }}
-    </main>
-  </article>
-{% endblock %}
+<article class="bg-white text-my-gray">
+  <header class="container mx-auto max-w-screen-lg pt-20 pb-10">
+    <p class="text-sm text-gray-500">{{ tags | join(', ') }}</p>
+    <h1 class="text-5xl font-serif py-2">{{ title }}</h1>
+    <p class="font-sans text-2xl/9">{{ description }}</p>
+    <p class="text-sm text-gray-500 py-2">{{ date | humanDate }}</p>
+  </header>
+  <main class="pb-5">
+    {{ content | safe }}
+  </main>
+</article>
 
 {% if related %}
-<aside class="">
-  <section class="">
-    <h2 class="">Related</h2>
+<aside class="bg-my-gray">
+  <section class="container mx-auto max-w-screen-lg pt-10 pb-10">
+    <h2 class="text-my-orange">Related</h2>
     <ol class="">
-    {% for post in collections.all | featured(related) %}
+    {% for post in collections.all | includes(related) %}
+      <li class="py-2">
+        <a href="{{ post.url }}" class="text-white">{{ post.data.title }}</a>
+      </li>
     {% endfor %}
     </ol>
   </section>
 </aside>
 {% endif %}
+
+{% endblock %}
