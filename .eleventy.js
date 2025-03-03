@@ -1,10 +1,8 @@
-import path from "path";
 import { DateTime } from "luxon";
 import yaml from "js-yaml";
 import markdown from "markdown-it";
 import markdownAttrs from "markdown-it-attrs";
 import markdownImplicitFigures from "markdown-it-implicit-figures";
-
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
@@ -49,10 +47,7 @@ export default function (config) {
       });
   });
 
-  // // minimize for production
-  // if (process.env.MINIMIZE) {
-  //   config.addTransform("htmlmin", htmlminTransform);
-  // }
+  // shortcodes
 
   config.addShortcode("year", () => `${new Date().getFullYear()}`);
 
@@ -88,13 +83,15 @@ export default function (config) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(format);
   });
 
-  config.addFilter("featured", (collection = [], related = []) => {
-    const pages = collection.filter((page) => related.includes(page.fileSlug));
+  config.addFilter("has", (collection = [], attributes = []) => {
+    const pages = collection.filter((page) =>
+      attributes.includes(page.fileSlug),
+    );
     const index = {};
     for (const page of pages) {
       index[page.fileSlug] = page;
     }
-    return related.map((fileSlug) => index[fileSlug]);
+    return attributes.map((fileSlug) => index[fileSlug]);
   });
 
   // plugins
@@ -120,8 +117,8 @@ export default function (config) {
 
   config.addPassthroughCopy({ "src/static": "." });
   config.addPassthroughCopy({ ".site.css": "site.css" });
-  config.setUseGitIgnore(false);
   config.addWatchTarget(".site.css");
+  config.setUseGitIgnore(false);
 
   return {
     dir: {
@@ -130,15 +127,3 @@ export default function (config) {
     pathPrefix,
   };
 }
-
-// function htmlminTransform(content, outputPath) {
-//   if (outputPath.endsWith(".html")) {
-//     let minified = htmlmin.minify(content, {
-//       useShortDoctype: true,
-//       removeComments: true,
-//       collapseWhitespace: true,
-//     });
-//     return minified;
-//   }
-//   return content;
-// }

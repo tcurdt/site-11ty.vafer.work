@@ -26,7 +26,7 @@ type: article
   <section class="container mx-auto max-w-screen-lg pt-10 pb-10">
     <h2 class="text-my-orange">Related</h2>
     <ol class="">
-    {% for post in collections.all | includes(related) %}
+    {% for post in collections.all | has(related) %}
       <li class="py-2">
         <a href="{{ post.url }}" class="text-white">{{ post.data.title }}</a>
       </li>

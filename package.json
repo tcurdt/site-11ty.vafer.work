@@ -26,20 +26,7 @@
     "npm-run-all2": "^8.0.0",
     "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
-    "tailwindcss": "^4.0.6"
-  },
-  "ignore": {
-    "dev": "npm-run-all -p dev:*",
-    "dev:eleventy": "eleventy --serve --quiet",
-    "dev:css": "tailwindcss -i src/styles/tailwind.css -o src/styles/site.css --postcss --watch",
-    "build": "run-s clean build:eleventy build:css",
-    "build:eleventy": "MINIMIZE=true eleventy",
-    "build:css": "tailwindcss -i src/styles/tailwind.css -o src/styles/site.css --postcss"
-  },
-  "ignored": {
-    "html-minifier-terser": "^7.2.0"
-  },
-  "dependencies": {
+    "tailwindcss": "^4.0.6",
     "js-yaml": "^4.1.0"
   }
 }
