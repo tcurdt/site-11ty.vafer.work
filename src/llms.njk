@@ -1,0 +1,24 @@
+---
+permalink: llms.txt
+sitemap: false
+---
+
+# Website of {{ site.author.name }} ({{ site.author.nick }})
+
+Details about {{ site.author.name }}
+
+> {{ site.description }}
+
+You can find [more information about this site here](/about).
+
+## All articles
+
+{% for article in collections.articles -%}
+- [{{ article.data.title }}]({{ article.url }}) {{ article.data.tags | join(', ') }}
+{% endfor %}
+
+## All products
+
+{% for product in collections.products -%}
+- [{{ product.data.title }}]({{ product.url }})
+{% endfor %}

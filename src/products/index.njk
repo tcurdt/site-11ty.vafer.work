@@ -9,16 +9,17 @@ sitemap: false
   <section id="hero" class="bg-white px-2">
     <div class="container mx-auto max-w-screen-lg text-lg pt-20 pb-10">
 
-    <ul>
+    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4">
     {%- for product in collections.products -%}
 
-    <li class="">
+    <li class="border">
 
       <a href="{{ product.url }}" class="">
         <img eleventy:widths="200" src="{{ product.url }}/overview.jpg" alt="{{ product.data.title }}" class="drop-shadow" />
       </a>
 
       <div class="py-5">
+        <h2 class="text-xl font-bold">{{ product.data.title }}</h2>
         <a href="{{ product.url }}" class="button">Learn More</a>
       </div>
 

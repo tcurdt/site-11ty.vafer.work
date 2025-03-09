@@ -5,9 +5,9 @@ export default {
   description:
     "Central hub for Torsten Curdt (tcurdt) on the web. Hosts the Torsten on Tech articles, Flip Flop Fix.",
   feed: {
-    tech: {
-      title: "Torsten on Tech",
-      url: "https://torstencurdt.com/tech/feed.xml",
+    articles: {
+      title: "Articles by Torsten Curdt",
+      url: "https://torstencurdt.com/articles/feed.xml",
     },
   },
   author: {
