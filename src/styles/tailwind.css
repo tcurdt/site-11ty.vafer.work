@@ -37,7 +37,7 @@ nav > ol > li > a:not([aria-current="page"]) {
 
 button,
 .button {
-  @apply text-lg font-sans bg-blue-500 text-white px-4 py-2 rounded-lg;
+  @apply text-lg font-sans bg-blue-500 text-white px-4 py-2 rounded-lg inline-block;
 }
 
 .alternating {
