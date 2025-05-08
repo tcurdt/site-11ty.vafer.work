@@ -1652,7 +1652,7 @@ snapshots:
 
   '@11ty/eleventy-plugin-rss@2.0.4':
     dependencies:
-      '@11ty/eleventy-utils': 2.0.1
+      '@11ty/eleventy-utils': 2.0.7
       '@11ty/posthtml-urls': 1.0.1
       debug: 4.4.0
       posthtml: 0.16.6
