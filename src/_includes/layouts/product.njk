@@ -22,7 +22,11 @@ type: product
         <p class="text-xl text-gray-600 mb-8">{{ description }}</p>
         {% if buyUrl %}
         <a href="{{ buyUrl }}" class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold px-8 py-4 rounded-lg transition duration-200 transform hover:scale-105">
-          {% if price %}Buy Now - {{ price }}{% else %}Buy Now{% endif %}
+          {% if lang == 'de' %}
+            {% if price %}Jetzt kaufen - {{ price }}{% else %}Jetzt kaufen{% endif %}
+          {% else %}
+            {% if price %}Buy Now - {{ price }}{% else %}Buy Now{% endif %}
+          {% endif %}
         </a>
         {% endif %}
 
@@ -140,10 +144,19 @@ type: product
   {% if buyUrl %}
   <section class="bg-blue-600 py-16">
     <div class="container mx-auto max-w-screen-lg px-4 text-center">
-      <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-      <p class="text-xl text-blue-100 mb-8">Join others who have already made the smart choice.</p>
+      {% if lang == 'de' %}
+        <h2 class="text-3xl font-bold text-white mb-4">Bereit loszulegen?</h2>
+        <p class="text-xl text-blue-100 mb-8">Schließen Sie sich anderen an, die bereits die richtige Wahl getroffen haben.</p>
+      {% else %}
+        <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+        <p class="text-xl text-blue-100 mb-8">Join others who have already made the smart choice.</p>
+      {% endif %}
       <a href="{{ buyUrl }}" class="inline-block bg-white text-blue-600 hover:bg-gray-100 text-lg font-semibold px-8 py-4 rounded-lg transition duration-200 transform hover:scale-105">
-        {% if price %}Buy Now - {{ price }}{% else %}Buy Now{% endif %}
+        {% if lang == 'de' %}
+          {% if price %}Jetzt kaufen - {{ price }}{% else %}Jetzt kaufen{% endif %}
+        {% else %}
+          {% if price %}Buy Now - {{ price }}{% else %}Buy Now{% endif %}
+        {% endif %}
       </a>
     </div>
   </section>
