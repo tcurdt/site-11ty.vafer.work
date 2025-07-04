@@ -20,5 +20,5 @@ You can find [more information about this site here](/about).
 ## All products
 
 {% for product in collections.products -%}
-- [{{ product.data.title }}]({{ product.url }})
+- [{{ product.data.title }}]({{ product.url }}) {{product.data.description}}
 {% endfor %}
