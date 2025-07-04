@@ -43,7 +43,7 @@ export default function (config) {
     return collection
       .getFilteredByGlob("src/products/*/index.njk")
       .sort(function (a, b) {
-        return (a.data.order || 999) - (b.data.order || 999);
+        return (a.data.order || 0) - (b.data.order || 0);
       });
   });
 
