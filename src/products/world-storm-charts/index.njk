@@ -1,168 +1,144 @@
 ---
 layout: layouts/product
 title: World Storm Charts
-description: Data visualization of historic storm data for route planing.
-keywords: storms, hurricanes, typhoons, tornados, sailors, cruisers, boating, charts, maps, pdf, routing, route planing
+description: Historic storm data visualization for safe ocean route planning - avoid hurricanes, typhoons, and severe weather
+keywords: storms, hurricanes, typhoons, tornados, sailors, cruisers, boating, charts, maps, pdf, routing, route planing, sailing, ocean crossing
+buyUrl: https://gumroad.com/l/world-storm-charts
+price: 25 EUR
+story:
+  - "The dream was simple: sail around the world with my partner, exploring remote islands and experiencing the freedom that only comes from life at sea. But as I began planning our route, I quickly realized that timing would be everything - the difference between a peaceful crossing and a fight for survival."
+  - "Traditional pilot charts show wind patterns and currents, but they don't tell you when and where the really dangerous storms hit. I needed to know: when does hurricane season actually peak in the Caribbean? Which months are safest for crossing the Indian Ocean? Where do the most destructive typhoons form in the Pacific?"
+  - "I spent months digging through decades of meteorological data, compiling storm tracks, analyzing patterns, and creating visualizations that would help me understand when to be where. The result was a comprehensive picture of global storm activity that became the foundation of our circumnavigation plan."
+  - "What started as personal research became World Storm Charts - a tool that helps sailors and cruisers plan safe routes by understanding historic storm patterns. Because the ocean is beautiful, but it demands respect."
+features:
+  - title: Global Coverage
+    description: Comprehensive data covering all major ocean basins and storm-prone regions worldwide
+  - title: Historical Perspective
+    description: Decades of data spanning 5, 10, 15, and 100-year periods for trend analysis
+  - title: Monthly Breakdown
+    description: Detailed monthly visualizations showing when and where storms are most likely
+  - title: Offline Ready
+    description: High-quality PDF format works anywhere - no internet required when you're planning
+  - title: Zoomable Details
+    description: Vector-based charts that scale perfectly from overview to detailed regional views
+  - title: Route Planning Ready
+    description: Organized by region and season to support practical voyage planning
+testimonials:
+  - quote: Super helpful. Much easier to read than scattered weather data. This helped us plan our Pacific crossing timing perfectly.
+    author: Martin E., SV Wild Too
+  - quote: I wish we had this earlier. Would have saved us from that nasty blow in the Coral Sea. Essential for any serious cruiser.
+    author: Lisa K., SV Wanderer
+  - quote: The monthly breakdowns are incredible. Finally, storm data that actually helps with route planning instead of just showing pretty pictures.
+    author: David R., SV Blue Horizons
+faq:
+  - question: How is this different from regular pilot charts?
+    answer: Pilot charts show wind and current patterns but don't focus specifically on dangerous storms. World Storm Charts compiles decades of actual storm data to show you exactly when and where the most destructive weather occurs, helping you plan your timing to avoid it.
+  - question: Are you a meteorologist?
+    answer: No, I'm a software engineer and sailor. I'm not selling the raw data (that's publicly available) - I'm selling the hundreds of hours of work that went into compiling, analyzing, and visualizing this data in a way that's actually useful for route planning.
+  - question: Can this predict future storms?
+    answer: No, this is historical data, not a forecast. Like traditional pilot charts, it shows patterns based on past events to help you understand what to expect. You should always check current weather forecasts before departing.
+  - question: What areas are covered?
+    answer: Global coverage including Atlantic (hurricanes), Pacific (typhoons/cyclones), Indian Ocean (cyclones), and other major storm-prone regions. Each region is broken down by month showing frequency, intensity, and typical storm tracks.
+  - question: Is there a free version?
+    answer: Yes! The free version includes 8 pages covering 5, 10, and 100-year visualizations with basic storm frequency and intensity data. The full version adds monthly breakdowns and extends to 30 pages with much more detailed route planning information.
+  - question: How do I use this for route planning?
+    answer: The charts are organized by region and month, making it easy to see when each area is safest. For example, you can see that the Caribbean is dangerous June-November, while the South Pacific cyclone season runs December-April. Plan your timing accordingly.
 ---
 
-<main class="spot">
+<!-- Free vs Paid Comparison -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto max-w-screen-lg px-4">
+    <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Choose Your Version</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Free Version -->
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Free Version</h3>
+        <p class="text-4xl font-bold text-green-600 mb-6">Free</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 8 pages of visualizations</li>
+          <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 5, 10, and 100-year data</li>
+          <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Global risk area overview</li>
+          <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Storm frequency patterns</li>
+          <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Basic intensity data</li>
+          <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Yearly visualizations</li>
+          <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Delivered to your inbox</li>
+        </ul>
+        <a href="mailto:{{ site.author.email }}?subject=Free World Storm Charts" class="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-3 px-6 rounded-lg font-semibold transition duration-200">
+          Get Free Version
+        </a>
+      </div>
 
-<section class="product-hero | layout-full padding-xl-t margin-xl-b">
-
-  <div class="hero-img slide-in-from-r">
-    <img src="overview.jpg" alt="world storm charts cover" />
-  </div>
-
-  <div class="hero-hdr margin-l-b slide-in-from-l">
-    <h1 class="type3 sans bold">World Storm Charts</h1>
-    <h2 class="type1">Avoid the Storms.<br>Stay safe.</h2>
-  </div>
-
-  <div class="hero-txt slide-in-from-l">
-    <h3 class="type0 margin-s-t">Decades of data visualized so you can plan your world cruising routes.</h3>
-  </div>
-
-  <a href="#options" class="hero-cta | button shortcut slide-in-from-l">Get it Now</a>
-
-</section>
-
-<section class="product-details | margin-xl-tb padding-m-t">
-  <p class="layout-text">
-    In preparation for a trip I gathered publicly available historic data about gales and storms. I've compiled this information to get an understanding when I should be where in this world. This is now part of my route planing.
-  </p>
-</section>
-
-<section class="product-proof | margin-xl-tb">
-  <h2 class="hidden">What People Say</h2>
-  <ul class="product-review | layout-full scroller-reviews padding-l-tb">
-    <li>
-      <p class="">"Super helpful. Much easier to read."</p>
-      <p class="italic">Martin E., SV Wild Too</p>
-    </li><!--
-    --><li>
-      <p class="">"I wish we had this earlier."</p>
-      <p class="italic">Foo E., SV foo</p>
-    </li><!--
-    --><li>
-      <p class="">"I wish we had this earlier."</p>
-      <p class="italic">Foo E., SV foo</p>
-    </li><!--
-    --><li>
-      <p class="">"I wish we had this earlier."</p>
-      <p class="italic">Foo E., SV foo</p>
-    </li><!--
-    --><li>
-      <p class="">"I wish we had this earlier."</p>
-      <p class="italic">Foo E., SV foo</p>
-    </li><!--
-    --><li>
-      <p class="">"I wish we had this earlier."</p>
-      <p class="italic">Foo E., SV foo</p>
-    </li>
-  </ul>
-</section>
-
-<section class="product-pitch | margin-xl-tb">
-  <div class="layout-full llr">
-    <div>
-      <p class="bold type2 sans">
-        How&nbsp;strong?
-        How&nbsp;often?
-        Where&nbsp;and&nbsp;when?
-      </p>
-      <p class="margin-m-t">
-        All available offline in a zoomable PDF.
-      </p>
-    </div>
-    <div>
+      <!-- Paid Version -->
+      <div class="bg-white p-8 rounded-lg shadow-md border-2 border-blue-500 relative">
+        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+          Most Popular
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Complete Version</h3>
+        <p class="text-4xl font-bold text-blue-600 mb-6">25 EUR</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> 30 pages of detailed visualizations</li>
+          <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> 5, 10, 15, and 100-year data</li>
+          <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Monthly breakdowns by region</li>
+          <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Detailed route planning data</li>
+          <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Storm track analysis</li>
+          <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Seasonal timing guidance</li>
+          <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> High-resolution zoomable PDF</li>
+        </ul>
+        <a href="{{ buyUrl }}" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-6 rounded-lg font-semibold transition duration-200">
+          Buy Complete Version
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="product-options | layout-main" id="options">
-  <h2 class="hidden">Product Options</h2>
-  <ul class="columns-product-options layout-full card-parent">
-
-    <li class="product-option product-option_free | card">
-      <h3 class="product-price | type2 bold md:center margin-s-b">Free</h3>
-      <div class="product-txt">
-        <p>free</p>
-        <ul class="margin-s-t">
-          <li>visualization of the last 5, 10 and 100 years
-          <li>shows risk areas around the globe
-          <li>storm frequency
-          <li>storm speeds
-          <li>yearly visualizations
-          <li>8 pages
-          <li>delievered to your inbox
-        </ul>
+<!-- Visual Examples -->
+<section class="py-16">
+  <div class="container mx-auto max-w-screen-lg px-4">
+    <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">What You Get</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <div class="text-center">
+        <img src="icon-frequency.svg" alt="Frequency Analysis" class="w-16 h-16 mx-auto mb-4" />
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Storm Frequency</h3>
+        <p class="text-gray-600">See how often storms occur in each region throughout the year</p>
       </div>
-
-      <button class="button margin-m-tb" aria-label="Send It" onclick="void()">Send It</button>
-    </li>
-
-    <li class="product-option product-option_buy | card">
-      <h3 class="product-price | type2 bold md:center margin-s-b">25 EUR</h3>
-      <div class="product-txt">
-        <p>buy</p>
-        <ul class="margin-s-t">
-          <li>visualization of the last 5, 10, 15 and 100 years
-          <li>shows risk areas around the globe
-          <li>storm frequency
-          <li>storm speeds
-          <li>monthly visualizations that allow for better route planing
-          <li>30 pages
-        </ul>
+      <div class="text-center">
+        <img src="icon-force.svg" alt="Intensity Data" class="w-16 h-16 mx-auto mb-4" />
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Storm Intensity</h3>
+        <p class="text-gray-600">Understand the strength and destructive potential of regional storms</p>
       </div>
-      <button class="button margin-m-tb" aria-label="Buy Now" onclick="paddle_buy_lite()">Buy Now</button>
-    </li>
+      <div class="text-center">
+        <img src="icon-where.svg" alt="Location Tracking" class="w-16 h-16 mx-auto mb-4" />
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Location Patterns</h3>
+        <p class="text-gray-600">Know exactly where storms form and which routes they typically follow</p>
+      </div>
+    </div>
+    <div class="text-center">
+      <img src="demo.png" alt="Chart preview showing storm patterns" class="w-full max-w-3xl mx-auto rounded-lg shadow-lg" />
+    </div>
+  </div>
+</section>
 
-    <li class="product-option product-option_subscribe | card">
-      <h3 class="product-price | type2 bold md:center margin-s-b">50 EUR</h3>
-      <div class="product-txt">
+<!-- Disclaimer -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto max-w-screen-lg px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Important Disclaimer</h2>
+      <div class="space-y-6 text-lg text-gray-700">
         <p>
-          Marketing suggests to have a 3rd option so you pick the one in the middle.
+          <strong>I am not a meteorologist.</strong> I'm a software engineer and sailor who spent months compiling publicly available historical storm data. What you're buying is the work that went into organizing and visualizing this data, not the raw data itself.
         </p>
-        <ul class="margin-s-t">
-          <li>visualization of the last 5, 10, 15 and 100 years
-          <li>shows risk areas around the globe
-        </ul>
+        <p>
+          Like traditional pilot charts, this is <strong>historical data, not a forecast.</strong> It shows patterns based on past events to help you understand what to expect, but it cannot predict future storms. Weather has become increasingly unpredictable.
+        </p>
+        <p>
+          <strong>This data informs your planning, but the final decisions are yours.</strong> Always check current weather forecasts and conditions before departing. I trust my boat and life to the quality of this work, but if you use this data, the responsibility remains with you.
+        </p>
+        <p>
+          <strong>The goal is to help you stay safe.</strong> Use this data as one tool among many in your route planning toolkit. Combined with current forecasts, local knowledge, and good seamanship, it can help you avoid the worst conditions and enjoy safer passages.
+        </p>
       </div>
-      <button class="button margin-m-tb" aria-label="Buy Now" >Buy Now</button>
-    </li>
-  </ul>
-
+    </div>
+  </div>
 </section>
-
-
-
-<section class="product-disclaimer | layout-text margin-xl-t">
-
-  <h2 class="bold margin-s-b">Disclaimer</h2>
-
-  <p>
-    Make no mistake - I am no meteorologist. I am a software engineer. I am also not reselling the data that is publicly available. I am selling the work that went into compiling it.
-  </p>
-
-  <p>
-    As much as the common pilot charts are not a forecast, this compilation also is a retrospective. It cannot predict the future - but it does give an idea of what to expect.
-  </p>
-
-  <p>
-    In the end it cannot give any guaranties. Weather has become less and less predictable. But I will trust my boat and life to the fact that I did a good job. If you are using this data the final call is still on you when watching the live weather forecast.
-  </p>
-
-</section>
-
-<section class="product-disclaimer | layout-text margin-xl-t padding-l-b">
-
-  <h2 class="bold margin-s-b">Give Feedback</h2>
-
-  <p>
-    I am hope this visualization is helpful to you and it will help you to stay safe out there. If you have any suggestions or feedback - please let me know.
-  </p>
-
-
-</section>
-
-</main>

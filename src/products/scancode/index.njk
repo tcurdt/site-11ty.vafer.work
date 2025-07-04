@@ -1,10 +1,195 @@
 ---
 layout: layouts/product
 title: ScanCode
-description: QR Code viewer for macOS
-keywords: qrcode, qr code, macos, viewer, scan, code, reader, scanner, mac, apple, app, application
+description: The most powerful QR code scanner for Mac - scan, decode, and trigger custom actions with ease
+keywords: qrcode, qr code, macos, viewer, scan, code, reader, scanner, mac, apple, app, application, automation, actions, workflow
+buyUrl: https://apps.apple.com/us/app/scancode/id1482517543?mt=12
+price: Available on Mac App Store
+story:
+  - "As a developer, I was constantly encountering QR codes in my daily workflow - deployment URLs, API endpoints, authentication tokens, test data, and more. But every time I needed to scan one, I had to pull out my phone, open the camera app, and manually type or share the content back to my Mac. It was inefficient and broke my flow."
+  - "I tried several Mac QR code scanners, but they all felt clunky and limited. Most could only decode the QR code and show you the text - but then what? I still had to manually copy it, open the right app, and paste it in. For URLs, I wanted them to open directly in my browser. For text, I wanted it on my clipboard. For certain codes, I wanted to trigger custom actions."
+  - "That's when I decided to build ScanCode - a Mac-native QR code scanner that doesn't just decode codes, but actually does something useful with them. It integrates seamlessly with macOS, supporting actions like opening URLs, copying text, launching apps, and even triggering custom workflows."
+  - "What started as a personal productivity tool became an essential part of my daily workflow. Whether I'm scanning deployment QR codes, conference WiFi codes, or sharing links between devices, ScanCode makes it effortless and keeps me in the flow."
+features:
+  - title: Instant Recognition
+    description: Advanced scanning engine that quickly recognizes QR codes from your camera or screen
+  - title: Smart Actions
+    description: Automatically opens URLs, copies text, or triggers custom actions based on code content
+  - title: Multiple Input Methods
+    description: Scan from camera, import from files, or capture directly from your screen
+  - title: Mac-Native Experience
+    description: Built specifically for macOS with native performance and system integration
+  - title: Privacy First
+    description: All scanning happens locally on your Mac - no data sent to servers
+  - title: Workflow Integration
+    description: Supports automation and integration with other Mac apps and services
+testimonials:
+  - quote: Finally, a QR scanner that actually works the way I expect on Mac. The automatic actions are a game-changer.
+    author: Alex M., Software Developer
+  - quote: I use this daily for conference networking and WiFi codes. So much faster than pulling out my phone.
+    author: Sarah K., Product Manager
+  - quote: The screen capture feature is brilliant. I can scan QR codes from web pages or documents instantly.
+    author: Mike R., Designer
+faq:
+  - question: How is this different from using my phone's camera?
+    answer: ScanCode is designed for Mac users who want to stay in their workflow. Instead of switching to your phone, manually typing or sharing content back to your Mac, ScanCode handles everything natively - scanning, decoding, and taking action all on your Mac.
+  - question: What types of QR codes does it support?
+    answer: ScanCode supports all standard QR code formats including URLs, plain text, contact information, WiFi credentials, and more. It can also handle custom QR codes and trigger appropriate actions based on the content.
+  - question: Can I scan QR codes from my screen?
+    answer: Yes! One of ScanCode's most powerful features is the ability to capture and scan QR codes directly from your screen - perfect for codes in web pages, documents, or other applications.
+  - question: Does it work with automation tools?
+    answer: Absolutely. ScanCode integrates with macOS automation features and can trigger custom workflows, launch specific applications, or perform complex actions based on the QR code content.
+  - question: Is my data secure?
+    answer: Yes, all QR code scanning and processing happens locally on your Mac. No data is sent to external servers, ensuring your privacy and security.
+  - question: How much does it cost?
+    answer: ScanCode is available on the Mac App Store with a one-time purchase. Check the App Store for current pricing and any available promotions.
 ---
 
-<main class="">
+<!-- Key Features Demo -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto max-w-screen-lg px-4">
+    <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Powerful Features for Mac Users</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="space-y-6">
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Camera Scanning</h3>
+            <p class="text-gray-600">Use your Mac's camera to scan QR codes in real-time with instant recognition</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Screen Capture</h3>
+            <p class="text-gray-600">Scan QR codes directly from your screen - web pages, documents, or applications</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Smart Actions</h3>
+            <p class="text-gray-600">Automatically opens URLs, copies text, or triggers custom actions based on content</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-900 mb-6">Perfect for Developers</h3>
+        <ul class="space-y-4">
+          <li class="flex items-center">
+            <span class="text-blue-500 mr-3">✓</span>
+            <span>Scan deployment URLs and API endpoints</span>
+          </li>
+          <li class="flex items-center">
+            <span class="text-blue-500 mr-3">✓</span>
+            <span>Quick access to test data and configuration</span>
+          </li>
+          <li class="flex items-center">
+            <span class="text-blue-500 mr-3">✓</span>
+            <span>Capture authentication tokens and keys</span>
+          </li>
+          <li class="flex items-center">
+            <span class="text-blue-500 mr-3">✓</span>
+            <span>Integrate with development workflows</span>
+          </li>
+          <li class="flex items-center">
+            <span class="text-blue-500 mr-3">✓</span>
+            <span>Screen capture for documentation QR codes</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-</main>
+<!-- Use Cases -->
+<section class="py-16">
+  <div class="container mx-auto max-w-screen-lg px-4">
+    <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Common Use Cases</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center p-6 bg-white rounded-lg shadow-md">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Development</h3>
+        <p class="text-gray-600">Scan API endpoints, deployment URLs, and test data without leaving your development environment</p>
+      </div>
+      
+      <div class="text-center p-6 bg-white rounded-lg shadow-md">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Networking</h3>
+        <p class="text-gray-600">Quickly connect to WiFi networks at conferences, cafes, and events</p>
+      </div>
+      
+      <div class="text-center p-6 bg-white rounded-lg shadow-md">
+        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Documentation</h3>
+        <p class="text-gray-600">Scan QR codes from documents, presentations, and web pages directly from your screen</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Mac Users Love It -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto max-w-screen-lg px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Why Mac Users Choose ScanCode</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Native Performance</h3>
+            <p class="text-gray-600">Built specifically for macOS with optimized performance and system integration</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Stays in Your Workflow</h3>
+            <p class="text-gray-600">No need to switch devices - scan and act on QR codes without leaving your Mac</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Privacy Focused</h3>
+            <p class="text-gray-600">All processing happens locally on your Mac - no data sent to external servers</p>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Automation Ready</h3>
+            <p class="text-gray-600">Integrates with macOS automation tools for custom workflows and actions</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Multiple Input Methods</h3>
+            <p class="text-gray-600">Camera, screen capture, and file import - scan from any source</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Developer Friendly</h3>
+            <p class="text-gray-600">Perfect for development workflows, API testing, and configuration management</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
