@@ -28,7 +28,7 @@ importers:
         version: 4.1.0
       luxon:
         specifier: ^3.5.0
-        version: 3.6.1
+        version: 3.7.1
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -914,8 +914,8 @@ packages:
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
 
-  luxon@3.6.1:
-    resolution: {integrity: sha512-tJLxrKJhO2ukZ5z0gyjY1zPh3Rh88Ej9P7jNrZiHMUXHae1yvI2imgOZtL1TO8TW6biMMKfTtAOoEJANgtWBMQ==}
+  luxon@3.7.1:
+    resolution: {integrity: sha512-RkRWjA926cTvz5rAb1BqyWkKbbjzCGchDUIKMCUvNi17j6f6j8uHGDV82Aqcqtzd+icoYpELmG3ksgGiFNNcNg==}
     engines: {node: '>=12'}
 
   magic-string@0.30.17:
@@ -1627,7 +1627,7 @@ snapshots:
       js-yaml: 4.1.0
       kleur: 4.1.5
       liquidjs: 10.21.1
-      luxon: 3.6.1
+      luxon: 3.7.1
       markdown-it: 14.1.0
       minimist: 1.2.8
       moo: 0.5.2
@@ -2368,7 +2368,7 @@ snapshots:
 
   lodash.uniq@4.5.0: {}
 
-  luxon@3.6.1: {}
+  luxon@3.7.1: {}
 
   magic-string@0.30.17:
     dependencies:
