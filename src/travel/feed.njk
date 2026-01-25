@@ -1,0 +1,25 @@
+---
+permalink: travel/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.feed.travel.title }}</title>
+  <link href="{{ site.feed.travel.url }}" rel="self"/>
+  <updated>{{ collections.articles | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ site.feed.travel.url }}</id>
+  <author>
+    <name>{{ site.author.name }}</name>
+    <email>{{ site.author.email }}</email>
+  </author>
+  {%- for post in collections.travel %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.url) }}{% endset %}
+  <entry>
+    <id>{{ absolutePostUrl }}</id>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

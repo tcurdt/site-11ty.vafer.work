@@ -39,16 +39,19 @@
         </li>
         <li class="">
           <a class=""
-            {% if page.url | hasPrefix("/articles/") %}aria-current="page"{% endif %}
-            href="/articles/">Articles</a>
+            {% if page.url | hasPrefix("/tech/") %}aria-current="page"{% endif %}
+            href="/tech/">Tech</a>
         </li>
-        <!--
         <li class="">
           <a class=""
-            {% if page.url | hasPrefix("/videos/") %}aria-current="page"{% endif %}
-            href="/videos/">Videos</a>
+            {% if page.url | hasPrefix("/travel/") %}aria-current="page"{% endif %}
+            href="/travel/">Travel</a>
         </li>
-        -->
+        <li class="">
+          <a class=""
+            {% if page.url | hasPrefix("/photo/") %}aria-current="page"{% endif %}
+            href="/photo/">Photo</a>
+        </li>
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/products/") %}aria-current="page"{% endif %}

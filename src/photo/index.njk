@@ -1,6 +1,6 @@
 ---
 layout: layouts/base
-title: Articles by Torsten Curdt
+title: Photos by Torsten Curdt
 sitemap: false
 ---
 
@@ -8,7 +8,7 @@ sitemap: false
 
   <section class="bg-white text-my-gray">
     <div class="container mx-auto max-w-screen-lg pt-20">
-      <h1 class="sr-only">Torsten Curdt writing about tech.</h1>
+      <h1 class="sr-only">Photos by Torsten Curdt</h1>
       <p class="text-2xl/10 font-serif alternating">
         <span></span>
         <span>Over the years</span>
@@ -32,16 +32,6 @@ sitemap: false
   <section class="bg-my-gray text-white">
     <div class="container mx-auto max-w-screen-lg text-lg py-10">
 
-      <ol>
-      {%- for article in collections.articles -%}
-
-      <li class="pb-5">
-        <a class="text-3xl font-serif" href="{{ article.url }}">{{ article.data.title }}</a>
-        <div class="text-sm text-gray-500">{{ article.data.tags | join(', ') }}</div>
-      </li>
-
-      {%- endfor -%}
-      </ol>
 
     </div>
   </section>

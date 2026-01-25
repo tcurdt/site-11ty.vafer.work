@@ -1,0 +1,49 @@
+---
+layout: layouts/base
+title: Articles by Torsten Curdt
+sitemap: false
+---
+
+<main class="">
+
+  <section class="bg-white text-my-gray">
+    <div class="container mx-auto max-w-screen-lg pt-20">
+      <h1 class="sr-only">Torsten Curdt writing about tech.</h1>
+      <p class="text-2xl/10 font-serif alternating">
+        <span></span>
+        <span>Over the years</span>
+        <span>I have written articles</span>
+        <span>about my</span>
+        <span class="bold">journey through the tech space</span>
+        <span>this covers</span>
+        <span>hiring</span>
+        <span>and</span>
+        <span>remote work</span>
+        <span>or</span>
+        <span>technical challenges</span>
+        <span>to follow along feel free to</span>
+        <span>subscribe via RSS or my socials</span>
+      </p>
+    </div>
+  </section>
+
+  {% include 'partials/socials.njk' %}
+
+  <section class="bg-my-gray text-white">
+    <div class="container mx-auto max-w-screen-lg text-lg py-10">
+
+      <ol>
+      {%- for article in collections.tech -%}
+
+      <li class="pb-5">
+        <a class="text-3xl font-serif" href="{{ article.url }}">{{ article.data.title }}</a>
+        <div class="text-sm text-gray-500">{{ article.data.tags | join(', ') }}</div>
+      </li>
+
+      {%- endfor -%}
+      </ol>
+
+    </div>
+  </section>
+
+</main>

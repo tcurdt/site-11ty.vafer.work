@@ -31,9 +31,9 @@ export default function (config) {
 
   // collections
 
-  config.addCollection("articles", function (collection) {
+  config.addCollection("tech", function (collection) {
     return collection
-      .getFilteredByGlob("src/articles/*/*.md")
+      .getFilteredByGlob("src/tech/*/*.md")
       .sort(function (a, b) {
         return b.date - a.date;
       });

@@ -2,12 +2,15 @@ export default {
   url: "https://torstencurdt.com",
   domain: "torstencurdt.com",
   language: "en-US",
-  description:
-    "Central hub for Torsten Curdt (tcurdt) on the web. Hosts the Torsten on Tech articles, Flip Flop Fix.",
+  description: "Central hub for Torsten Curdt (tcurdt) on the web.",
   feed: {
-    articles: {
-      title: "Articles by Torsten Curdt",
-      url: "https://torstencurdt.com/articles/feed.xml",
+    tech: {
+      title: "Torsten Curdt writing about tech",
+      url: "https://torstencurdt.com/tech/feed.xml",
+    },
+    tech: {
+      title: "Torsten Curdt writing about travel",
+      url: "https://torstencurdt.com/travel/feed.xml",
     },
   },
   author: {
