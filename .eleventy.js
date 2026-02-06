@@ -9,7 +9,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 export default function (config) {
   // support for github pages
   const pathPrefix = process.env.GITHUB_REPOSITORY
-    ? process.env.GITHUB_REPOSITORY.split("/")[1]
+    ? "/" + process.env.GITHUB_REPOSITORY.split("/")[1]
     : "";
 
   // markdown

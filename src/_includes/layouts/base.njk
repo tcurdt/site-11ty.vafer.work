@@ -23,7 +23,7 @@
 
     <link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
-    <link rel="alternate" href="/articles/feed.xml" type="application/atom+xml" />
+    <link rel="alternate" href="{{ '/articles/feed.xml' | url }}" type="application/atom+xml" />
     <link rel="me" href="https://mastodon.social/@tcurdt" />
     {% block header %}{% endblock %}
   </head>
@@ -35,27 +35,27 @@
         <li class="">
           <a class=""
             {% if page.url == "/" or page.url | hasPrefix("/cv/") %}aria-current="page"{% endif %}
-            href="/" >Torsten</a>
+            href="{{ '/' | url }}" >Torsten</a>
         </li>
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/tech/") %}aria-current="page"{% endif %}
-            href="/tech/">Tech</a>
+            href="{{ '/tech/' | url }}">Tech</a>
         </li>
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/travel/") %}aria-current="page"{% endif %}
-            href="/travel/">Travel</a>
+            href="{{ '/travel/' | url }}">Travel</a>
         </li>
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/photo/") %}aria-current="page"{% endif %}
-            href="/photo/">Photo</a>
+            href="{{ '/photo/' | url }}">Photo</a>
         </li>
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/products/") %}aria-current="page"{% endif %}
-            href="/products/" >Products</a>
+            href="{{ '/products/' | url }}" >Products</a>
         </li>
       </ol>
     </nav>
@@ -67,9 +67,9 @@
 
         &copy;&nbsp;Torsten&nbsp;Curdt |
         <a href="mailto:{{ site.author.email }}">Email</a> |
-        <a href="/likes/">Likes</a> |
-        <a href="/legal/">Legal&nbsp;Notice</a> |
-        <a href="/privacy/">Privacy&nbsp;Policy</a>
+        <a href="{{ '/likes/' | url }}">Likes</a> |
+        <a href="{{ '/legal/' | url }}">Legal&nbsp;Notice</a> |
+        <a href="{{ '/privacy/' | url }}">Privacy&nbsp;Policy</a>
 
       </div>
     </footer>
