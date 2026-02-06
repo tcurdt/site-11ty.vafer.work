@@ -11,9 +11,15 @@ Details about {{ site.author.name }}
 
 You can find [more information about this site here](/about).
 
-## All articles
+## All articles about tech
 
-{% for article in collections.articles -%}
+{% for article in collections.tech -%}
+- [{{ article.data.title }}]({{ article.url }}) {{ article.data.tags | join(', ') }}
+{% endfor %}
+
+## All articles about travel
+
+{% for article in collections.travel -%}
 - [{{ article.data.title }}]({{ article.url }}) {{ article.data.tags | join(', ') }}
 {% endfor %}
 

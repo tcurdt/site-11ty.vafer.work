@@ -34,6 +34,16 @@ export default function (config) {
   config.addCollection("tech", function (collection) {
     return collection
       .getFilteredByGlob("src/tech/*/*.md")
+      .filter((item) => !item.data.draft)
+      .sort(function (a, b) {
+        return b.date - a.date;
+      });
+  });
+
+  config.addCollection("travel", function (collection) {
+    return collection
+      .getFilteredByGlob("src/travel/*/*.md")
+      .filter((item) => !item.data.draft)
       .sort(function (a, b) {
         return b.date - a.date;
       });
@@ -42,6 +52,7 @@ export default function (config) {
   config.addCollection("products", function (collection) {
     return collection
       .getFilteredByGlob("src/products/*/index.njk")
+      .filter((item) => !item.data.draft)
       .sort(function (a, b) {
         return (a.data.order || 0) - (b.data.order || 0);
       });
