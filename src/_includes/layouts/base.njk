@@ -19,7 +19,7 @@
     <title>{{ title or site.title or metadata.title }}</title>
     <link rel="stylesheet" href="{{ '/site.css' | url }}" />
 
-    <script src="/prefetch.js" defer></script>
+    <script src="{{ '/prefetch.js' | url }}" defer></script>
 
     <link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
