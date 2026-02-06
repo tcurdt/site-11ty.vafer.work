@@ -5,6 +5,7 @@ import markdownAttrs from "markdown-it-attrs";
 import markdownImplicitFigures from "markdown-it-implicit-figures";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { HtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (config) {
   // support for github pages
@@ -107,6 +108,7 @@ export default function (config) {
 
   // plugins
 
+  config.addPlugin(HtmlBasePlugin);
   config.addPlugin(pluginRss);
   config.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp", "jpeg", "svg"],

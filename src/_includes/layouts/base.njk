@@ -7,23 +7,23 @@
     <meta name="description" content="{{ metadata.description }}" />
 
     <link rel="apple-touch-icon" sizes="180x180"
-      href="{{ '/apple-touch-icon.png' | url }}"
+      href="{{ '/apple-touch-icon.png' }}"
     />
     <link rel="icon" type="image/png" sizes="32x32"
-      href="{{ '/favicon-32x32.png' | url }}"
+      href="{{ '/favicon-32x32.png' }}"
     />
     <link rel="icon" type="image/png" sizes="16x16"
-      href="{{ '/favicon-16x16.png' | url }}"
+      href="{{ '/favicon-16x16.png' }}"
     />
 
     <title>{{ title or site.title or metadata.title }}</title>
-    <link rel="stylesheet" href="{{ '/site.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/site.css' }}" />
 
-    <script src="{{ '/prefetch.js' | url }}" defer></script>
+    <script src="{{ '/prefetch.js' }}" defer></script>
 
-    <link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
+    <link rel="manifest" href="{{ '/site.webmanifest' }}" />
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
-    <link rel="alternate" href="{{ '/articles/feed.xml' | url }}" type="application/atom+xml" />
+    <link rel="alternate" href="{{ '/articles/feed.xml' }}" type="application/atom+xml" />
     <link rel="me" href="https://mastodon.social/@tcurdt" />
     {% block header %}{% endblock %}
   </head>
@@ -35,27 +35,27 @@
         <li class="">
           <a class=""
             {% if page.url == "/" or page.url | hasPrefix("/cv/") %}aria-current="page"{% endif %}
-            href="{{ '/' | url }}" >Torsten</a>
+            href="{{ '/' }}" >Torsten</a>
         </li>
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/tech/") %}aria-current="page"{% endif %}
-            href="{{ '/tech/' | url }}">Tech</a>
+            href="{{ '/tech/' }}">Tech</a>
         </li>
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/travel/") %}aria-current="page"{% endif %}
-            href="{{ '/travel/' | url }}">Travel</a>
+            href="{{ '/travel/' }}">Travel</a>
         </li>
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/photo/") %}aria-current="page"{% endif %}
-            href="{{ '/photo/' | url }}">Photo</a>
+            href="{{ '/photo/' }}">Photo</a>
         </li>
         <li class="">
           <a class=""
             {% if page.url | hasPrefix("/products/") %}aria-current="page"{% endif %}
-            href="{{ '/products/' | url }}" >Products</a>
+            href="{{ '/products/' }}" >Products</a>
         </li>
       </ol>
     </nav>
@@ -67,9 +67,9 @@
 
         &copy;&nbsp;Torsten&nbsp;Curdt |
         <a href="mailto:{{ site.author.email }}">Email</a> |
-        <a href="{{ '/likes/' | url }}">Likes</a> |
-        <a href="{{ '/legal/' | url }}">Legal&nbsp;Notice</a> |
-        <a href="{{ '/privacy/' | url }}">Privacy&nbsp;Policy</a>
+        <a href="{{ '/likes/' }}">Likes</a> |
+        <a href="{{ '/legal/' }}">Legal&nbsp;Notice</a> |
+        <a href="{{ '/privacy/' }}">Privacy&nbsp;Policy</a>
 
       </div>
     </footer>

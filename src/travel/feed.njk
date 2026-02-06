@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
     <email>{{ site.author.email }}</email>
   </author>
   {%- for post in collections.travel %}
-  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.url) }}{% endset %}
+  {% set absolutePostUrl %}{{ post.url | htmlBaseUrl | absoluteUrl(site.url) }}{% endset %}
   <entry>
     <id>{{ absolutePostUrl }}</id>
     <title>{{ post.data.title }}</title>
